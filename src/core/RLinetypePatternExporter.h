@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2026 by Andrew Mustun. All rights reserved.
  *
  * This file is part of the QCAD project.
  *
@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#ifndef RSHAPESEXPORTER_H
-#define RSHAPESEXPORTER_H
+#ifndef RLINETYPEPATTERNEXPORTER_H
+#define RLINETYPEPATTERNEXPORTER_H
 
 #include "core_global.h"
 
@@ -25,11 +25,12 @@
 #include "RExporter.h"
 
 /**
- * Exports exploded polylines or splines as connected shapes with continuous line pattern.
+ * Exports a list of given shapes, for example from exploded polylines or splines as a continuous line pattern.
  */
-class QCADCORE_EXPORT RShapesExporter : public RExporter {
+class QCADCORE_EXPORT RLinetypePatternExporter : public RExporter {
 public:
-    RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);
+    RLinetypePatternExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);
+    RLinetypePatternExporter(RExporter& exporter, const QSharedPointer<RShape>& shape, double offset);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
 
     virtual RLinetypePattern getLinetypePattern() {

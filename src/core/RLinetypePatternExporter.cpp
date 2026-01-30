@@ -16,15 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RShapesExporter.h"
+#include "RLinetypePatternExporter.h"
 #include "RLine.h"
 #include "RSpline.h"
 #include "RSplineProxy.h"
 
-RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset) :
+
+/**
+ * Constructor.
+ *
+ * \param exporter Exporter to which the shapes are exported, e.g. a RPainterPathExporter
+ * \param shapes Shapes to be exported as connected shapes with continuous line pattern.
+ * \param offset Offset into the line type pattern.
+ */
+RLinetypePatternExporter::RLinetypePatternExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset) :
     RExporter(exporter.getDocument()), exporter(exporter), shapes(shapes) {
 
-    //setScreenBasedLinetypes(exporter.getScreenBasedLinetypes());
     double length = 0.0;
 
     for (int i=0; i<shapes.length(); i++) {
@@ -34,16 +41,31 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
 
     RLine line(RVector(0,0), RVector(length, 0));
 
-    RSplineProxy* proxy = RSpline::getSplineProxy();
-    if (proxy) {
-        proxy->init();
-    }
-    // export straight line with angle 0 and length of polyline / spline:
-    // this is mapped to the polyline / spline by this exporter:
+    // export straight line with angle 0 and length of line, arc, polyline, spline, ...:
+    // the pattern is mapped to the shape by this exporter:
     exportLine(line, offset);
-    if (proxy) {
-        proxy->uninit();
-    }
+}
+
+/**
+ * Constructor.
+ *
+ * \param exporter Exporter to which the shapes are exported, e.g. a RPainterPathExporter
+ * \param shape Shape to be exported as connected shapes with continuous line pattern.
+ * \param offset Offset into the line type pattern.
+ */
+RLinetypePatternExporter::RLinetypePatternExporter(RExporter& exporter, const QSharedPointer<RShape>& shape, double offset) :
+    RExporter(exporter.getDocument()), exporter(exporter) {
+
+    shapes.append(shape);
+
+    double length = shape->getLength();
+    lengthAt.push_back(length);
+
+    RLine line(RVector(0,0), RVector(length, 0));
+
+    // export straight line with angle 0 and length of line, arc, polyline, spline, ...:
+    // the pattern is mapped to the shape by this exporter:
+    exportLine(line, offset);
 }
 
 /**
@@ -52,7 +74,7 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
  * \param line Line segment, mapped to the straight, horizontal line starting at 0/0).
  * \param angle Always 0.0.
  */
-void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
+void RLinetypePatternExporter::exportLineSegment(const RLine& line, double angle) {
     Q_UNUSED(angle)
 
     // indices of segments on real shape:
@@ -77,7 +99,7 @@ void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
     }
 }
 
-void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
+void RLinetypePatternExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
     Q_UNUSED(angle)
 
     RVector p = getPointAt(pos.x);
@@ -85,7 +107,7 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
     RExporter::exportPainterPaths(paths, a, p);
 }
 
-RVector RShapesExporter::getPointAt(double d, int* index) {
+RVector RLinetypePatternExporter::getPointAt(double d, int* index) {
     int i = getShapeAt(d);
     if (i<0 || i>=(int)lengthAt.size() || i>=(int)shapes.length()) {
         return RVector::invalid;
@@ -109,7 +131,7 @@ RVector RShapesExporter::getPointAt(double d, int* index) {
     return points[0];
 }
 
-double RShapesExporter::getAngleAt(double d) {
+double RLinetypePatternExporter::getAngleAt(double d) {
     int i = getShapeAt(d);
     if (i<0 || i>shapes.length() || (unsigned long)i>lengthAt.size()) {
         return 0.0;
@@ -118,7 +140,7 @@ double RShapesExporter::getAngleAt(double d) {
     return shapes[i]->getAngleAt(a);
 }
 
-int RShapesExporter::getShapeAt(double d) {
+int RLinetypePatternExporter::getShapeAt(double d) {
     for (int i=0; (unsigned long)i<lengthAt.size(); i++) {
         double d1;
         if (i==0) {
@@ -135,7 +157,7 @@ int RShapesExporter::getShapeAt(double d) {
     return -1;
 }
 
-void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle) {
+void RLinetypePatternExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle) {
     for (int i=i1; i<=i2; i++) {
         if (i!=i1 && i!=i2) {
             // whole shape is between points:

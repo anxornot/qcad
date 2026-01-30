@@ -135,7 +135,7 @@ add_library(qcadcore SHARED
     RSelectionChangedEvent.cpp RSelectionChangedEvent.h
     RSelectionListener.h
     RSettings.cpp RSettings.h
-    RShapesExporter.cpp RShapesExporter.h
+    RLinetypePatternExporter.cpp RLinetypePatternExporter.h
     RSingleApplication.cpp RSingleApplication.h
     RSingleton.cpp RSingleton.h
     RSnap.cpp RSnap.h

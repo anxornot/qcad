@@ -75,7 +75,7 @@ SOURCES += \
     RScriptHandlerRegistry.cpp \
     RSelectionChangedEvent.cpp \
     RSettings.cpp \
-    RShapesExporter.cpp \
+    RLinetypePatternExporter.cpp \
     RSingleApplication.cpp \
     RSingleton.cpp \
     RSnap.cpp \
@@ -236,7 +236,7 @@ HEADERS = \
     RSelectionChangedEvent.h \
     RSelectionListener.h \
     RSettings.h \
-    RShapesExporter.h \
+    RLinetypePatternExporter.h \
     RSingleApplication.h \
     RSingleton.h \
     RSnap.h \

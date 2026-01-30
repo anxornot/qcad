@@ -35,7 +35,7 @@
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSettings.h"
-#include "RShapesExporter.h"
+#include "RLinetypePatternExporter.h"
 #include "RSpline.h"
 #include "RStorage.h"
 #include "RTextBasedData.h"
@@ -1562,7 +1562,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     if (!continuous) {
         if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
             // we have a spline proxy:
-            RShapesExporter(*this, QList<QSharedPointer<RShape> >() << spline.clone(), offset);
+            RLinetypePatternExporter(*this, QList<QSharedPointer<RShape> >() << spline.clone(), offset);
         }
         else {
             // fallback if we don't have a spline proxy:
@@ -1638,7 +1638,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
 
     if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
         // all explodable entities including splines if we have a spline proxy:
-        RShapesExporter(*this, sub, offset);
+        RLinetypePatternExporter(*this, sub, offset);
         return;
     }
 
