@@ -1724,6 +1724,18 @@ REntity::Id RDocument::queryClosestXY(
     return queryClosestXY(candidates, wcsPosition, range, draft, strictRange);
 }
 
+/**
+ * Queries the entity closest to the given position within range, along with
+ * the indices of the shape elements that are closest (2d).
+ *
+ * \param wcsPosition The position to which the entity has to be close (2d).
+ * \param range The range in which to search.
+ * \param draft True for draft mode (faster but less accurate).
+ * \param strictRange The strict range for distance checking.
+ * \param includeLockedLayers True to include entities on locked layers.
+ * \param selectedOnly True to only consider selected entities.
+ * \return Pair of entity ID and set of shape indices.
+ */
 QPair<REntity::Id, QSet<int> > RDocument::queryClosestXYWithIndices(
         const RVector& wcsPosition,
         double range,
@@ -1802,6 +1814,17 @@ REntity::Id RDocument::queryClosestXY(
     return ret;
 }
 
+/**
+ * Queries the entity closest to the given position from a set of candidates,
+ * along with the indices of the shape elements that are closest (2d).
+ *
+ * \param candidates Map of candidate entity IDs with their shape indices.
+ * \param wcsPosition The position to which the entity has to be close (2d).
+ * \param range The range in which to search.
+ * \param draft True for draft mode (faster but less accurate).
+ * \param strictRange The strict range for distance checking.
+ * \return Pair of entity ID and set of shape indices.
+ */
 QPair<REntity::Id, QSet<int> > RDocument::queryClosestXYWithIndices(
         QMap<REntity::Id, QSet<int> >& candidates,
         const RVector& wcsPosition,
@@ -1840,6 +1863,9 @@ QPair<REntity::Id, QSet<int> > RDocument::queryClosestXYWithIndices(
     return ret;
 }
 
+/**
+ * \return Set of entity IDs for all infinite entities (such as construction lines).
+ */
 QSet<REntity::Id> RDocument::queryInfiniteEntities() const {
     return storage.queryInfiniteEntities();
 }
@@ -1863,6 +1889,12 @@ QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) const {
 }
 
 
+/**
+ * Queries entities that intersect with the given box (fast approximation based on bounding boxes).
+ *
+ * \param box Query box.
+ * \return Set of entity IDs that may intersect with the box.
+ */
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXYFast(const RBox& box) {
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
@@ -1881,6 +1913,14 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXYFast(const RBox& box) {
     return queryIntersectedShapesXYFast(boxExpanded);
 }
 
+/**
+ * Queries entity shapes that intersect with the given box (fast approximation).
+ * Returns only visible entities.
+ *
+ * \param box Query box.
+ * \param noInfiniteEntities If true, excludes infinite entities like construction lines.
+ * \return Set of entity IDs whose shapes intersect with the box.
+ */
 QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities) {
     // always include construction lines (XLine):
     QSet<REntity::Id> infinites;
@@ -1922,6 +1962,19 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool 
     return res;
 }
 
+/**
+ * Queries entities that intersect with the given box in the XY plane.
+ * This is a convenience wrapper around queryIntersectedEntitiesXYWithIndex.
+ *
+ * \param box Query box.
+ * \param checkBoundingBoxOnly If true, only checks bounding box intersection.
+ * \param includeLockedLayers If true, includes entities on locked layers.
+ * \param blockId The block to query, or INVALID_ID for current block.
+ * \param filter List of entity types to include, or empty for all types.
+ * \param selectedOnly If true, only returns selected entities.
+ * \param layerId Layer to filter by, or INVALID_ID for all layers.
+ * \return Set of entity IDs that intersect with the box.
+ */
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
@@ -1929,6 +1982,19 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
     return RS::toSet<REntity::Id>(queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys());
 }
 
+/**
+ * Queries entities that intersect with the given box in the XY plane,
+ * returning both entity IDs and shape element indices.
+ *
+ * \param box Query box.
+ * \param checkBoundingBoxOnly If true, only checks bounding box intersection.
+ * \param includeLockedLayers If true, includes entities on locked layers.
+ * \param blockId The block to query, or INVALID_ID for current block.
+ * \param filter List of entity types to include, or empty for all types.
+ * \param selectedOnly If true, only returns selected entities.
+ * \param layerId Layer to filter by, or INVALID_ID for all layers.
+ * \return Map of entity IDs to sets of intersecting shape element indices.
+ */
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
@@ -1971,6 +2037,20 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
     return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId);
 }
 
+/**
+ * Queries entity shapes that intersect with the given box in the XY plane,
+ * returning both entity IDs and shape element indices.
+ * This method performs more precise intersection testing than the fast variant.
+ *
+ * \param box Query box.
+ * \param checkBoundingBoxOnly If true, only checks bounding box intersection.
+ * \param includeLockedLayers If true, includes entities on locked layers.
+ * \param blockId The block to query, or INVALID_ID for current block.
+ * \param filter List of entity types to include, or empty for all types.
+ * \param selectedOnly If true, only returns selected entities.
+ * \param layerId Layer to filter by, or INVALID_ID for all layers.
+ * \return Map of entity IDs to sets of intersecting shape element indices.
+ */
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
@@ -2164,6 +2244,13 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 }
 
 
+/**
+ * Queries entities that are completely contained within the given box in the XY plane.
+ * Filters out undone entities, entities not on the current block, and invisible entities.
+ *
+ * \param box Query box.
+ * \return Set of entity IDs that are completely contained in the box.
+ */
 QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) const {
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
@@ -2278,6 +2365,15 @@ QSet<RObject::Id> RDocument::querySelectedLayers() const {
     return storage.querySelectedLayers();
 }
 
+/**
+ * Queries all entities that are connected to the given entity within the specified tolerance.
+ * Two entities are considered connected if their endpoints are within tolerance distance.
+ *
+ * \param entityId The ID of the entity to find connections for.
+ * \param tolerance The maximum distance for considering entities connected.
+ * \param layerId Optional layer ID to restrict search to, or INVALID_ID for all layers.
+ * \return Set of entity IDs that are connected to the given entity.
+ */
 QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double tolerance, RObject::Id layerId) {
     QSet<REntity::Id> ret;
 
@@ -2351,6 +2447,13 @@ QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double
     return ret;
 }
 
+/**
+ * Queries all objects that should be shown in the property editor.
+ * If entities are selected, returns those. Otherwise returns selected layers,
+ * current block, and associated layout.
+ *
+ * \return Set of object IDs for the property editor.
+ */
 QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
     QSet<RObject::Id> objectIds = querySelectedEntities();
 
@@ -2391,18 +2494,30 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
     return objectIds;
 }
 
+/**
+ * \copydoc RStorage::queryDocumentVariables
+ */
 QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariables() const {
     return storage.queryDocumentVariables();
 }
 
+/**
+ * \copydoc RStorage::queryDocumentVariablesDirect
+ */
 QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariablesDirect() const {
     return storage.queryDocumentVariablesDirect();
 }
 
+/**
+ * \copydoc RStorage::queryDimStyle
+ */
 QSharedPointer<RDimStyle> RDocument::queryDimStyle() const {
     return storage.queryDimStyle();
 }
 
+/**
+ * \copydoc RStorage::queryDimStyleDirect
+ */
 QSharedPointer<RDimStyle> RDocument::queryDimStyleDirect() const {
     return storage.queryDimStyleDirect();
 }
@@ -2429,10 +2544,23 @@ QSharedPointer<RObject> RDocument::queryObjectDirect(RObject::Id objectId) const
     return storage.queryObjectDirect(objectId);
 }
 
+/**
+ * Queries the object with the given ID using the internal storage representation.
+ * This is faster than queryObject but returns a pointer that should not be modified.
+ *
+ * \param objectId The ID of the object to query.
+ * \return Raw pointer to the object or NULL.
+ */
 RObject* RDocument::queryObjectCC(RObject::Id objectId) const {
     return storage.queryObjectCC(objectId);
 }
 
+/**
+ * Queries an object by its handle.
+ *
+ * \param objectHandle The handle of the object to query.
+ * \return Shared pointer to the object or a null pointer.
+ */
 QSharedPointer<RObject> RDocument::queryObjectByHandle(RObject::Handle objectHandle) const {
     return storage.queryObjectByHandle(objectHandle);
 }
@@ -2460,6 +2588,13 @@ QSharedPointer<REntity> RDocument::queryEntityDirect(REntity::Id entityId) const
     return storage.queryEntityDirect(entityId);
 }
 
+/**
+ * Queries a visible entity with the given ID, returning the direct instance.
+ * If the entity is not visible, returns a null pointer.
+ *
+ * \param entityId The ID of the entity to query.
+ * \return Shared pointer to the entity or a null pointer.
+ */
 QSharedPointer<REntity> RDocument::queryVisibleEntityDirect(REntity::Id entityId) const {
     return storage.queryVisibleEntityDirect(entityId);
 }
@@ -2690,6 +2825,12 @@ bool RDocument::isParentLayerLocked(const RLayer& layer) const {
     return storage.isParentLayerLocked(layer);
 }
 
+/**
+ * Checks if the given object ID refers to an entity.
+ *
+ * \param entityId The object ID to check.
+ * \return True if the object is an entity, false otherwise.
+ */
 bool RDocument::isEntity(RObject::Id entityId) const {
     QSharedPointer<REntity> entity = queryEntityDirect(entityId);
     if (entity.isNull()) {
@@ -2698,6 +2839,12 @@ bool RDocument::isEntity(RObject::Id entityId) const {
     return true;
 }
 
+/**
+ * Checks if the entity with the given ID is editable.
+ *
+ * \param entityId The ID of the entity to check.
+ * \return True if the entity exists and is editable, false otherwise.
+ */
 bool RDocument::isEntityEditable(REntity::Id entityId) const {
     QSharedPointer<REntity> entity = queryEntityDirect(entityId);
     if (entity.isNull()) {
@@ -2786,6 +2933,12 @@ bool RDocument::isLayoutBlock(RBlock::Id blockId) const {
     return storage.isLayoutBlock(blockId);
 }
 
+/**
+ * Checks if the layer of the entity with the given ID is frozen.
+ *
+ * \param entityId The ID of the entity to check.
+ * \return True if the entity's layer is frozen, false otherwise.
+ */
 bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     QSharedPointer<REntity> entity = queryEntityDirect(entityId);
     if (entity.isNull()) {
@@ -2959,6 +3112,9 @@ RBox RDocument::getEntitiesBox(QSet<REntity::Id>& ids) const {
     return storage.getEntitiesBox(ids);
 }
 
+/**
+ * Clears all spatial indices for this document and its blocks.
+ */
 void RDocument::clearSpatialIndices() {
     spatialIndex.clear();
     QMap<RBlock::Id, RSpatialIndex*>::iterator it;
@@ -3045,6 +3201,12 @@ void RDocument::rebuildSpatialIndex() {
     storage.update();
 }
 
+/**
+ * Removes all entities from the given block from the spatial index.
+ * This is typically done when entering a block for editing.
+ *
+ * \param blockId The ID of the block to remove from the spatial index.
+ */
 void RDocument::removeBlockFromSpatialIndex(RBlock::Id blockId) {
     static int recursionDepth = 0;
     recursionDepth++;
@@ -3070,6 +3232,14 @@ void RDocument::removeBlockFromSpatialIndex(RBlock::Id blockId) {
     recursionDepth--;
 }
 
+/**
+ * Checks if a block contains references to another block (directly or indirectly).
+ * This is used to detect circular references.
+ *
+ * \param blockId The ID of the block to check.
+ * \param referencedBlockId The ID of the potentially referenced block.
+ * \return True if blockId contains references to referencedBlockId, false otherwise.
+ */
 bool RDocument::blockContainsReferences(RBlock::Id blockId, RBlock::Id referencedBlockId) {
     if (blockId==referencedBlockId) {
         return true;
@@ -3138,6 +3308,13 @@ bool RDocument::addBlockToSpatialIndex(RBlock::Id blockId, RBlock::Id ignoreBloc
 }
 
 
+/**
+ * Removes an entity from the spatial index using the given bounding boxes.
+ * If no bounding boxes are provided, uses the entity's current bounding boxes.
+ *
+ * \param entity The entity to remove from the spatial index.
+ * \param boundingBoxes The bounding boxes to use for removal.
+ */
 void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes) {
     QList<RBox> bbs = boundingBoxes;
     if (bbs.isEmpty()) {
@@ -3155,11 +3332,21 @@ void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity, const QLi
     }
 }
 
+/**
+ * Removes an entity from the spatial index using its current bounding boxes.
+ *
+ * \param entity The entity to remove from the spatial index.
+ */
 void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity)
 {
     removeFromSpatialIndex(entity, QList<RBox>());
 }
 
+/**
+ * Adds an entity to the spatial index using its current bounding boxes.
+ *
+ * \param entity The entity to add to the spatial index.
+ */
 void RDocument::addToSpatialIndex(QSharedPointer<REntity> entity) {
     //spatialIndex.addToIndex(entity->getId(), entity->getBoundingBoxes());
 
@@ -3169,6 +3356,10 @@ void RDocument::addToSpatialIndex(QSharedPointer<REntity> entity) {
 }
 
 
+/**
+ * Updates all entities in the document (recalculates bounding boxes, etc.).
+ * This is typically done after changing document-level settings.
+ */
 void RDocument::updateAllEntities() {
     QSet<REntity::Id> ids = queryAllEntities(false, false);
 
@@ -3232,6 +3423,12 @@ void RDocument::setModified(bool m) {
     storage.setModified(m);
 }
 
+/**
+ * Copies all document variables from another document to this one.
+ * This includes known variables, custom variables, and dimension font settings.
+ *
+ * \param other The document to copy variables from.
+ */
 void RDocument::copyVariablesFrom(const RDocument& other) {
     RTransaction* transaction = new RTransaction(storage, "Copy variables from other document", false);
 
@@ -3263,6 +3460,13 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
     delete transaction;
 }
 
+/**
+ * Adds an automatically named variable with the given value.
+ * Auto variables are named sequentially (e.g., a0, a1, a2, ...).
+ *
+ * \param value The value for the auto variable.
+ * \return The name of the created auto variable.
+ */
 QString RDocument::addAutoVariable(double value) {
     RTransaction* transaction = new RTransaction(storage, "Add auto variable", false);
     bool useLocalTransaction;
@@ -3274,6 +3478,9 @@ QString RDocument::addAutoVariable(double value) {
     return ret;
 }
 
+/**
+ * \return List of all auto variable names in this document.
+ */
 QStringList RDocument::getAutoVariables() const {
     QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
     if (docVars.isNull()) {
@@ -3282,6 +3489,12 @@ QStringList RDocument::getAutoVariables() const {
     return docVars->getAutoVariables();
 }
 
+/**
+ * Substitutes all auto variable references in the given expression with their values.
+ *
+ * \param expression The expression containing auto variable references.
+ * \return The expression with auto variables replaced by their values.
+ */
 QString RDocument::substituteAutoVariables(const QString& expression) {
     QString exp = expression;
 
@@ -3303,11 +3516,22 @@ QString RDocument::substituteAutoVariables(const QString& expression) {
     return exp;
 }
 
+/**
+ * Evaluates a mathematical expression, substituting auto variables with their values.
+ *
+ * \param expression The mathematical expression to evaluate.
+ * \param ok Optional pointer to bool that will be set to true if evaluation succeeded.
+ * \return The result of the evaluation.
+ */
 double RDocument::eval(const QString& expression, bool* ok) {
     QString exp = substituteAutoVariables(expression);
     return RMath::eval(exp, ok);
 }
 
+/**
+ * \return Reference to the global clipboard document.
+ *         The clipboard is created on first access.
+ */
 RDocument& RDocument::getClipboard() {
     if (clipboard==NULL) {
         clipboard = new RDocument(
@@ -3319,11 +3543,19 @@ RDocument& RDocument::getClipboard() {
     return *clipboard;
 }
 
+/**
+ * \return True if the document is currently editing a working set, false otherwise.
+ */
 bool RDocument::isEditingWorkingSet() const {
     QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
     return docVars->hasCustomProperty("QCAD", "WorkingSet/BlockName") && !docVars->hasCustomProperty("QCAD", "WorkingSet/Ignore");
 }
 
+/**
+ * Sets whether to ignore the working set.
+ *
+ * \param on True to ignore the working set, false otherwise.
+ */
 void RDocument::setIgnoreWorkingSet(bool on) {
     if (on) {
         queryDocumentVariablesDirect()->setCustomProperty("QCAD", "WorkingSet/Ignore", true);
@@ -3333,10 +3565,18 @@ void RDocument::setIgnoreWorkingSet(bool on) {
     }
 }
 
+/**
+ * Sets whether listeners should be notified of changes to the document.
+ *
+ * \param on True to enable listener notifications, false to disable.
+ */
 void RDocument::setNotifyListeners(bool on) {
     getStorage().setNotifyListeners(on);
 }
 
+/**
+ * \return True if listener notifications are enabled, false otherwise.
+ */
 bool RDocument::getNotifyListeners() const {
     return getStorage().getNotifyListeners();
 }
@@ -3364,6 +3604,9 @@ QDebug operator<<(QDebug dbg, RDocument& d) {
     return dbg.space();
 }
 
+/**
+ * Dumps document information to qDebug for debugging purposes.
+ */
 void RDocument::dump() {
     qDebug() << *this;
 }
