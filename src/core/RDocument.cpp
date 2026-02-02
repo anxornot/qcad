@@ -75,6 +75,13 @@ RDocument::RDocument(RStorage& storage, RSpatialIndex& spatialIndex, bool before
 //    }
 //}
 
+/**
+ * Initializes this document with default settings, layers, and linetypes.
+ * This method is called internally by the constructor and clear() method.
+ *
+ * \param beforeLoad True if the document is being initialized before loading
+ *                   from a file, false otherwise.
+ */
 void RDocument::init(bool beforeLoad) {
     RS::Unit defaultUnit = (RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt();
     RS::Measurement measurement = (RS::Measurement)RSettings::getValue("UnitSettings/Measurement", RS::Metric).toInt();
@@ -376,6 +383,13 @@ void RDocument::init(bool beforeLoad) {
     storage.setModified(false);
 }
 
+/**
+ * Initializes or updates the document's linetypes based on the current unit setting.
+ * Adds default linetypes (metric or imperial) to the document.
+ *
+ * \param transaction Optional transaction to use for adding linetypes. If NULL,
+ *                    a new transaction will be created.
+ */
 void RDocument::initLinetypes(RTransaction* transaction) {
     bool useLocalTransaction = (transaction==NULL);
     if (useLocalTransaction) {
@@ -397,6 +411,11 @@ void RDocument::initLinetypes(RTransaction* transaction) {
     }
 }
 
+/**
+ * \return List of default linetype objects for the current unit system.
+ *         Returns metric linetypes if the document uses metric units,
+ *         imperial linetypes otherwise.
+ */
 QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
     QList<QSharedPointer<RObject> > ret;
 
@@ -465,15 +484,32 @@ RDocument::~RDocument() {
     spatialIndex.doDelete();
 }
 
+/**
+ * Sets the unit of measurement for this document.
+ * Also reinitializes linetypes to match the new unit system.
+ *
+ * \param unit The unit of measurement to set.
+ * \param transaction Optional transaction to use. If NULL, changes are made directly.
+ */
 void RDocument::setUnit(RS::Unit unit, RTransaction* transaction) {
     storage.setUnit(unit, transaction);
     initLinetypes(transaction);
 }
 
+/**
+ * \return The unit of measurement for this document.
+ */
 RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
 }
 
+/**
+ * Sets the measurement system for this document (metric or imperial).
+ * Also reinitializes linetypes to match the new measurement system.
+ *
+ * \param m The measurement system to set.
+ * \param transaction Optional transaction to use. If NULL, changes are made directly.
+ */
 void RDocument::setMeasurement(RS::Measurement m,  RTransaction* transaction) {
     storage.setMeasurement(m, transaction);
     initLinetypes(transaction);
@@ -506,6 +542,10 @@ RS::Measurement RDocument::getMeasurement() const {
     return storage.getMeasurement();
 }
 
+/**
+ * \return True if this document uses the metric measurement system, false otherwise.
+ *         If the measurement system is unknown, the unit setting is used to determine this.
+ */
 bool RDocument::isMetric() const {
     RS::Measurement m = getMeasurement();
 
@@ -544,6 +584,12 @@ double RDocument::getLinetypeScale() const {
     return storage.getLinetypeScale();
 }
 
+/**
+ * Formats a linear value according to this document's settings.
+ *
+ * \param value The linear value to format.
+ * \return The formatted string representation of the value.
+ */
 QString RDocument::formatLinear(double value) {
     return RUnit::formatLinear(
         value,
@@ -557,6 +603,12 @@ QString RDocument::formatLinear(double value) {
     );
 }
 
+/**
+ * Formats an angle value according to this document's settings.
+ *
+ * \param value The angle value to format (in radians).
+ * \return The formatted string representation of the angle.
+ */
 QString RDocument::formatAngle(double value) {
     return RUnit::formatAngle(
         value,
@@ -578,6 +630,12 @@ RS::LinearFormat RDocument::getLinearFormat() const {
     return (RS::LinearFormat)dimStyle->getInt(RS::DIMLUNIT);
 }
 
+/**
+ * Sets the linear format type for this document.
+ * This updates the dimension style variable "$DIMLUNIT".
+ *
+ * \param f The linear format type to set.
+ */
 void RDocument::setLinearFormat(RS::LinearFormat f) {
     //setKnownVariable(RS::DIMLUNIT, f);
 
@@ -599,6 +657,10 @@ int RDocument::getLinearPrecision() {
 
 
 
+/**
+ * \return True if leading zeroes should be shown in linear dimensions, false otherwise.
+ *         This is determined by the dimension style variable "$DIMZIN".
+ */
 bool RDocument::showLeadingZeroes() {
     //return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 4);
 
@@ -607,6 +669,10 @@ bool RDocument::showLeadingZeroes() {
 }
 
 
+/**
+ * \return True if trailing zeroes should be shown in linear dimensions, false otherwise.
+ *         This is determined by the dimension style variable "$DIMZIN".
+ */
 bool RDocument::showTrailingZeroes() {
     //return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 8);
 
@@ -614,6 +680,10 @@ bool RDocument::showTrailingZeroes() {
     return !(dimStyle->getInt(RS::DIMZIN) & 8);
 }
 
+/**
+ * \return True if leading zeroes should be shown in angular dimensions, false otherwise.
+ *         This is determined by the dimension style variable "$DIMAZIN".
+ */
 bool RDocument::showLeadingZeroesAngle() {
     //return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 1);
 
@@ -622,6 +692,10 @@ bool RDocument::showLeadingZeroesAngle() {
 }
 
 
+/**
+ * \return True if trailing zeroes should be shown in angular dimensions, false otherwise.
+ *         This is determined by the dimension style variable "$DIMAZIN".
+ */
 bool RDocument::showTrailingZeroesAngle() {
     //return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 2);
 
@@ -892,10 +966,20 @@ RBlock::Id RDocument::getCurrentBlockId() const {
     return storage.getCurrentBlockId();
 }
 
+/**
+ * \return The name of the current block in this document.
+ */
 QString RDocument::getCurrentBlockName() const {
     return getBlockName(storage.getCurrentBlockId());
 }
 
+/**
+ * Sets the current block for editing.
+ * Removes the block from the spatial index while it's being edited
+ * and adds the previous block back to the spatial index.
+ *
+ * \param blockId The ID of the block to set as current.
+ */
 void RDocument::setCurrentBlock(RBlock::Id blockId) {
     RBlock::Id prevBlockId = getCurrentBlockId();
 
@@ -910,6 +994,11 @@ void RDocument::setCurrentBlock(RBlock::Id blockId) {
     }
 }
 
+/**
+ * Sets the current block for editing by name.
+ *
+ * \param blockName The name of the block to set as current.
+ */
 void RDocument::setCurrentBlock(const QString& blockName) {
     //storage.setCurrentBlock(blockName);
     RBlock::Id id = getBlockId(blockName);
@@ -919,22 +1008,40 @@ void RDocument::setCurrentBlock(const QString& blockName) {
     setCurrentBlock(id);
 }
 
+/**
+ * Sets the current viewport for this document.
+ *
+ * \param viewportId The ID of the viewport to set as current.
+ */
 void RDocument::setCurrentViewport(RObject::Id viewportId) {
     storage.setCurrentViewport(viewportId);
 }
 
+/**
+ * \return The ID of the current viewport, or INVALID_ID if no viewport is set.
+ */
 RObject::Id RDocument::getCurrentViewportId() {
     return storage.getCurrentViewportId();
 }
 
+/**
+ * \return True if a current viewport is set, false otherwise.
+ */
 bool RDocument::hasCurrentViewport() {
     return getCurrentViewportId()!=RObject::INVALID_ID;
 }
 
+/**
+ * Unsets the current viewport for this document.
+ */
 void RDocument::unsetCurrentViewport() {
     storage.unsetCurrentViewport();
 }
 
+/**
+ * \return A randomly generated temporary block name that doesn't conflict
+ *         with existing blocks. The name follows the pattern "A$C#####".
+ */
 QString RDocument::getTempBlockName() const {
     do {
 #if QT_VERSION >= 0x060000
@@ -951,6 +1058,14 @@ QString RDocument::getTempBlockName() const {
     } while(true);
 }
 
+/**
+ * Generates a unique block name based on the given name.
+ * If the name already exists, appends a number suffix (_1, _2, etc.).
+ *
+ * \param currentName The base name to use for generating a unique name.
+ * \param usedBlockNames Additional block names to check against (beyond those in the document).
+ * \return A unique block name.
+ */
 QString RDocument::getUniqueBlockName(const QString& currentName, const QStringList& usedBlockNames) const {
     QString baseName = currentName;
 
@@ -977,14 +1092,23 @@ QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
 
+/**
+ * \copydoc RStorage::getBlockNameFromHandle
+ */
 QString RDocument::getBlockNameFromHandle(RBlock::Handle blockHandle) const {
     return storage.getBlockNameFromHandle(blockHandle);
 }
 
+/**
+ * \copydoc RStorage::getBlockNameFromLayout
+ */
 QString RDocument::getBlockNameFromLayout(const QString& layoutName) const {
     return storage.getBlockNameFromLayout(layoutName);
 }
 
+/**
+ * \copydoc RStorage::getBlockNameFromLayout
+ */
 QString RDocument::getBlockNameFromLayout(RLayout::Id layoutId) const {
     return storage.getBlockNameFromLayout(layoutId);
 }
@@ -996,10 +1120,16 @@ QSet<QString> RDocument::getBlockNames(const QString& rxStr, bool undone) const 
     return storage.getBlockNames(rxStr, undone);
 }
 
+/**
+ * \copydoc RStorage::sortBlocks
+ */
 QList<RBlock::Id> RDocument::sortBlocks(const QList<RBlock::Id>& blockIds) const {
     return storage.sortBlocks(blockIds);
 }
 
+/**
+ * \copydoc RStorage::sortLayers
+ */
 QList<RLayer::Id> RDocument::sortLayers(const QList<RLayer::Id>& layerIds) const {
     return storage.sortLayers(layerIds);
 }
@@ -1109,6 +1239,9 @@ RLayer::Id RDocument::getLayerId(const QString& layerName) const {
     return storage.getLayerId(layerName);
 }
 
+/**
+ * \copydoc RStorage::getLayer0Id
+ */
 RLayer::Id RDocument::getLayer0Id() const {
     return storage.getLayer0Id();
 }
@@ -1204,42 +1337,76 @@ QList<RLinetypePattern> RDocument::getLinetypePatterns() const {
     return storage.getLinetypePatterns();
 }
 
+/**
+ * \return True if the given linetype ID represents the "BYLAYER" linetype, false otherwise.
+ */
 bool RDocument::isByLayer(RLinetype::Id linetypeId) const {
     return linetypeId == linetypeByLayerId;
 }
 
+/**
+ * \return True if the given linetype ID represents the "BYBLOCK" linetype, false otherwise.
+ */
 bool RDocument::isByBlock(RLinetype::Id linetypeId) const {
     return linetypeId == linetypeByBlockId;
 }
 
+/**
+ * \return The maximum lineweight used in this document.
+ */
 RLineweight::Lineweight RDocument::getMaxLineweight() const {
     return storage.getMaxLineweight();
 }
 
+/**
+ * Sets the file name associated with this document.
+ *
+ * \param fn The file name to set.
+ */
 void RDocument::setFileName(const QString& fn) {
     fileName = fn;
 }
 
+/**
+ * \return The file name associated with this document.
+ */
 QString RDocument::getFileName() const {
     return fileName;
 }
 
+/**
+ * Sets the file version string for this document.
+ *
+ * \param fv The file version string to set.
+ */
 void RDocument::setFileVersion(const QString& fv) {
     fileVersion = fv;
 }
 
+/**
+ * \return The file version string for this document.
+ */
 QString RDocument::getFileVersion() const {
     return fileVersion;
 }
 
+/**
+ * Resets the transaction stack, clearing all undo and redo history.
+ */
 void RDocument::resetTransactionStack() {
     transactionStack.reset();
 }
 
+/**
+ * \return True if there are transactions available for undo, false otherwise.
+ */
 bool RDocument::isUndoAvailable() const {
     return transactionStack.isUndoAvailable();
 }
 
+/**
+ * \return True if there are transactions available for redo, false otherwise.
+ */
 bool RDocument::isRedoAvailable() const {
     return transactionStack.isRedoAvailable();
 }
@@ -1266,6 +1433,9 @@ RStorage& RDocument::getStorage() {
     return storage;
 }
 
+/**
+ * \return Const reference to storage that backs the document.
+ */
 const RStorage& RDocument::getStorage() const {
     return storage;
 }
@@ -1277,10 +1447,20 @@ RSpatialIndex& RDocument::getSpatialIndex() {
     return spatialIndex;
 }
 
+/**
+ * \return Const reference to the spatial index.
+ */
 const RSpatialIndex& RDocument::getSpatialIndex() const {
     return spatialIndex;
 }
 
+/**
+ * Gets or creates the spatial index for a specific block.
+ * Each block maintains its own spatial index for efficient entity lookups.
+ *
+ * \param blockId The ID of the block.
+ * \return Pointer to the spatial index for the specified block.
+ */
 RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) const {
     if (disableSpatialIndicesByBlock) {
         return &spatialIndex;
@@ -1292,6 +1472,9 @@ RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) const {
     return spatialIndicesByBlock[blockId];
 }
 
+/**
+ * \return Pointer to the spatial index for the current block.
+ */
 RSpatialIndex* RDocument::getSpatialIndexForCurrentBlock() const {
     RBlock::Id currentBlockId = getCurrentBlockId();
     return getSpatialIndexForBlock(currentBlockId);
