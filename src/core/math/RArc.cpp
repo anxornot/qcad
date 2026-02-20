@@ -782,6 +782,8 @@ bool RArc::stretch(const RPolyline& area, const RVector& offset) {
  * \todo Not working as expected, fix or disable
  */
 QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
+    // TODO: return transformed polyline with line segments
+
     RVector ct = center.getTransformed2D(transform);
     RVector sp = getStartPoint();
     RVector spt = sp.getTransformed2D(transform);
