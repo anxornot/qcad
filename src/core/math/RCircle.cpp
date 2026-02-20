@@ -268,6 +268,8 @@ bool RCircle::flipVertical() {
 }
 
 QSharedPointer<RShape> RCircle::getTransformed(const QTransform& transform) const {
+    // TODO: return transformed polyline with line segments
+
     RVector ct = center.getTransformed2D(transform);
     RVector sp = center + RVector(radius, 0);
     RVector spt = sp.getTransformed2D(transform);
