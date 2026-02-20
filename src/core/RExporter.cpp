@@ -1759,8 +1759,25 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
         }
     }
 
+    // only if patterns are enabled (e.g. SVG export),
+    // counter-scale line patterns by viewport scale (if we are in a viewport)
+    // to get the same pattern size independent of the viewport scale:
+    if (enablePatterns) {
+        if (blockRefViewportStack.size()>0) {
+            QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
+            if (!topLevel0.isNull() && topLevel0->isOfType(RS::EntityViewport)) {
+                QSharedPointer<RViewportEntity> vp = topLevel0.dynamicCast<RViewportEntity>();
+                double vpScale = vp->getScale();
+                if (vpScale>1e-6) {
+                    factor /= vpScale;
+                }
+            }
+        }
+    }
+
     if (blockRefViewportStack.size()>1) {
         // if top level entity is viewport and second level entity is block ref, we are rendering a block reference in a viewport:
+        // scale line type pattern by block reference scale (VP scale is already applied above):
         QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
         QSharedPointer<REntity> topLevel1 = blockRefViewportStack[1];
         if (!topLevel0.isNull() && topLevel0->isOfType(RS::EntityViewport) &&
