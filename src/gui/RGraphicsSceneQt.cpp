@@ -176,7 +176,9 @@ bool RGraphicsSceneQt::beginPath() {
 
                 if (!pixelWidth) {
                     // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
-                    localPen.setWidth(RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter)*4.25);
+                    // (truncated to whole pixels, then scaled by the user preference):
+                    int w = (int)(RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter)*4.25);
+                    localPen.setWidthF(w * RSettings::getScreenBasedLineweightScaleFactor());
                 }
             }
         }
@@ -187,7 +189,7 @@ bool RGraphicsSceneQt::beginPath() {
             (!layer.isNull() && layer->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true)) {
             QPen localPen = currentPen;
             localPen.setCosmetic(true);
-            localPen.setWidthF(entity->getLineweight()/10);
+            localPen.setWidthF(entity->getLineweight()/10 * RSettings::getScreenBasedLineweightScaleFactor());
             currentPainterPath.setPen(localPen);
         }
         else {

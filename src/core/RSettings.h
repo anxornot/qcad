@@ -292,6 +292,7 @@ public:
 
     static bool getAutoScaleLinetypePatterns();
     static bool getApplyLineweightToPoints();
+    static double getScreenBasedLineweightScaleFactor();
     static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
 
@@ -385,6 +386,7 @@ private:
     static int allowMouseMoveInterruptions;
     static double arcAngleLengthThreshold;
     static double fadingFactor;
+    static double screenBasedLineweightScaleFactor;
     static double minArcAngleStep;
     static double dotLength;
     static int dashThreshold;

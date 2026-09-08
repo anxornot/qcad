@@ -101,6 +101,7 @@ int RSettings::allowMouseMoveInterruptions = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 double RSettings::fadingFactor = -1;
+double RSettings::screenBasedLineweightScaleFactor = -1;
 double RSettings::minArcAngleStep = -1;
 double RSettings::dotLength = -1;
 int RSettings::dashThreshold = -1;
@@ -2128,6 +2129,21 @@ bool RSettings::getApplyLineweightToPoints() {
     return (bool)applyLineweightToPoints;
 }
 
+/**
+ * \return Factor applied to line weights when screen-based line weights
+ * are displayed (screen-based linetypes mode). A factor of 2 shows
+ * screen-based line weights twice as wide as the default (factor 1).
+ */
+double RSettings::getScreenBasedLineweightScaleFactor() {
+    if (screenBasedLineweightScaleFactor<0.0) {
+        screenBasedLineweightScaleFactor = getValue("GraphicsView/ScreenBasedLineweightScaleFactor", 1.0).toDouble();
+        if (screenBasedLineweightScaleFactor<=0.0) {
+            screenBasedLineweightScaleFactor = 1.0;
+        }
+    }
+    return screenBasedLineweightScaleFactor;
+}
+
 bool RSettings::getUseSecondarySelectionColor() {
     if (useSecondarySelectionColor==-1) {
         useSecondarySelectionColor = getValue("GraphicsViewColors/UseSecondarySelectionColor", QVariant(false)).toBool();
@@ -2303,6 +2319,7 @@ void RSettings::resetCache() {
     darkMode = -1;
     darkGuiBackground = -1;
     fadingFactor = -1;
+    screenBasedLineweightScaleFactor = -1;
 }
 
 void RSettings::uninit() {
