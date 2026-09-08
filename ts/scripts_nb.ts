@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Programinnstillinger</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 preferanseendringene skal tre i kraft.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Standardverdier for</translation>
     </message>
@@ -1370,7 +1370,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5979,17 +5979,7 @@ er allerede i listen.</translation>
         <translation>Standard linjevekt:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatisk bruk av skjermbaserte linjetyper i modellvisningen</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatisk bytte til skjermbaserte linjetyper i modellvisning</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skala linjetypemønstre etter linjevekt</translation>
     </message>
@@ -6089,7 +6079,27 @@ er allerede i listen.</translation>
         <translation>Maksimalt antall valgte enheter med viste referansepunkter:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Bruk automatisk skjermbaserte linjetyper i modellvisning</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Bytt automatisk til skjermbaserte linjetyper i modellvisning</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Skaleringsfaktor for skjermbaserte linjevekter:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor som brukes på linjevekter når skjermbaserte linjevekter vises (f.eks. viser 2 skjermbaserte linjevekter dobbelt så brede)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
     </message>
@@ -6209,7 +6219,7 @@ er allerede i listen.</translation>
         <translation>Sekundære referansepunkter:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Valgboksens kant:</translation>
     </message>
@@ -6229,22 +6239,22 @@ er allerede i listen.</translation>
         <translation>Startpunkter:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Sluttpunkter:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiære referansepunkter:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap-referansepunkter:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap-verktøy</translation>
     </message>
@@ -6279,7 +6289,7 @@ er allerede i listen.</translation>
         <translation>Fadingfaktor for arbeidssett:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoom-verktøy</translation>
     </message>
@@ -13850,7 +13860,7 @@ er allerede i listen.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Tapte data støttes ikke</translation>
     </message>
@@ -13881,7 +13891,7 @@ er allerede i listen.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Gjenopprett standardinnstillinger</translation>
     </message>

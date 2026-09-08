@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Uygulama Tercihleri</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 lütfen QCAD&apos;i yeniden başlatın.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Varsayılanlar için</translation>
     </message>
@@ -1368,7 +1368,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
@@ -5954,17 +5954,7 @@ zaten listede.</translation>
         <translation>Varsayılan çizgi ağırlığı:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Model görünümünde ekran tabanlı çizgi türlerini otomatik olarak kullan</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Model görünümünde ekran tabanlı çizgi tiplerine otomatik geçiş</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Çizgi tipi desenlerini çizgi ağırlığına göre ölçeklendirme</translation>
     </message>
@@ -6035,7 +6025,27 @@ zaten listede.</translation>
         <translation>Özel genişliklere sahip çoklu çizgileri her zaman en az 1 piksel genişliğinde oluşturun</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Model görünümünde ekran tabanlı çizgi tiplerini otomatik olarak kullan</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Model görünümünde ekran tabanlı çizgi tiplerine otomatik geç</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Ekran tabanlı çizgi kalınlığı ölçek faktörü:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Ekran tabanlı çizgi kalınlıkları görüntülendiğinde çizgi kalınlıklarına uygulanan faktör (örn. 2, ekran tabanlı çizgi kalınlıklarını iki kat geniş gösterir)</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Yayları bu açının (derece) altında çizgiler olarak görüntüleyin:</translation>
     </message>
@@ -6204,7 +6214,7 @@ zaten listede.</translation>
         <translation>İkincil referans noktaları:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Seçim kutusu kenarlığı:</translation>
     </message>
@@ -6224,22 +6234,22 @@ zaten listede.</translation>
         <translation>Başlangıç noktası:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Bitiş noktaları:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Üçüncül referans noktaları:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Yakalama referans noktaları:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Yakalama Araçları</translation>
     </message>
@@ -6274,7 +6284,7 @@ zaten listede.</translation>
         <translation>Çalışma seti solma faktörü:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Yakınlaştırma Araçları</translation>
     </message>
@@ -13840,7 +13850,7 @@ zaten listede.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -13871,7 +13881,7 @@ zaten listede.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Varsayılanları geri yükle</translation>
     </message>

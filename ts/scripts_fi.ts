@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Sovelluksen asetukset</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 asetuksien muutokset astuvat voimaan.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Oletusarvot</translation>
     </message>
@@ -1370,7 +1370,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -5969,7 +5969,27 @@ on jo luettelossa.</translation>
         <translation>Oletusviivapaino:</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+35"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Käytä automaattisesti kuvaruutuun perustuvia viivatyyppejä mallinäkymässä</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Vaihda automaattisesti kuvaruutuun perustuviin viivatyyppeihin mallinäkymässä</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Kuvaruutuun perustuvien viivanpaksuuksien skaalauskerroin:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Kerroin, jota sovelletaan viivanpaksuuksiin, kun kuvaruutuun perustuvat viivanpaksuudet näytetään (esim. 2 näyttää kuvaruutuun perustuvat viivanpaksuudet kaksi kertaa leveämpinä)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Soveltaa viivapainoa pisteisiin</translation>
     </message>
@@ -6040,7 +6060,7 @@ on jo luettelossa.</translation>
         <translation>Säikeiden määrä:</translation>
     </message>
     <message>
-        <location line="-220"/>
+        <location line="-266"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -6050,12 +6070,7 @@ on jo luettelossa.</translation>
         <translation>Poista käytöstä tulostusta varten</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automaattisesti vaihda kuvaruudun viivat muotoilunäkymässä</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Venytä viivatyypin kuvioita viivan paksuuden mukaan</translation>
     </message>
@@ -6070,12 +6085,7 @@ on jo luettelossa.</translation>
         <translation>Näyttötila ja suorituskyky</translation>
     </message>
     <message>
-        <location line="-83"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
-    </message>
-    <message>
-        <location line="+116"/>
+        <location line="+33"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Renderöi aina vähintään 1 pikselin levyiset polyviivat mukautetuilla leveyksillä</translation>
     </message>
@@ -6199,7 +6209,7 @@ on jo luettelossa.</translation>
         <translation>Toissijaiset viitepisteet:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Valintalaatikon reuna:</translation>
     </message>
@@ -6219,22 +6229,22 @@ on jo luettelossa.</translation>
         <translation>Aloituspisteet:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Loppupisteet:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiaariset viitepisteet:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Tartunnan viitepisteet:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Tartuntatyökalut</translation>
     </message>
@@ -6269,7 +6279,7 @@ on jo luettelossa.</translation>
         <translation>Työskentelysarjan häipymiskerroin:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Suurennustyökalut</translation>
     </message>
@@ -6279,7 +6289,7 @@ on jo luettelossa.</translation>
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>
@@ -13850,7 +13860,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13881,7 +13891,7 @@ on jo luettelossa.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>

@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Rakenduse eelistused</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 eelistuste muudatused jõustuksid.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Vaikimisi väärtused</translation>
     </message>
@@ -1370,7 +1370,7 @@ Kas soovite seda taastada?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Vidinad</translation>
     </message>
@@ -5979,17 +5979,7 @@ on juba loendis.</translation>
         <translation>Vaikimisi rea kaal:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automaatselt kasutada ekraanil põhinevaid linetüüpe mudelivaates</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automaatne üleminek ekraanil põhinevatele linetüüpidele mudelivaates</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Joonetüübi mustrite skaleerimine joone kaalu järgi</translation>
     </message>
@@ -6089,7 +6079,27 @@ on juba loendis.</translation>
         <translation>Maksimaalselt valitud üksused koos kuvatavate võrdluspunktidega:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Kasuta mudelivaates automaatselt ekraanipõhiseid joonetüüpe</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Lülitu mudelivaates automaatselt ekraanipõhistele joonetüüpidele</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Ekraanipõhiste joonkaalude mõõtkava tegur:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Tegur, mida rakendatakse joonkaaludele, kui kuvatakse ekraanipõhiseid joonkaale (nt 2 kuvab ekraanipõhised joonkaalud kaks korda laiemana)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
     </message>
@@ -6209,7 +6219,7 @@ on juba loendis.</translation>
         <translation>Sekundaarsed võrdluspunktid:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Valikukasti piir:</translation>
     </message>
@@ -6229,22 +6239,22 @@ on juba loendis.</translation>
         <translation>Stardipunktid:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Lõpp-punktid:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Kolmandad võrdluspunktid:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap-võrdluspunktid:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap Tools</translation>
     </message>
@@ -6279,7 +6289,7 @@ on juba loendis.</translation>
         <translation>Töökomplekti tuhmumise tegur:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoom tööriistad</translation>
     </message>
@@ -13850,7 +13860,7 @@ on juba loendis.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Andmete mahajäämine ei ole toetatud</translation>
     </message>
@@ -13881,7 +13891,7 @@ on juba loendis.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Taastada vaikimisi seadistused</translation>
     </message>

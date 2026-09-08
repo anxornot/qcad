@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Preferințele aplicației</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 modificările preferințelor să intre în vigoare.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Valorile implicite pentru</translation>
     </message>
@@ -1372,7 +1372,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgeturi</translation>
     </message>
@@ -5984,17 +5984,7 @@ este deja în listă.</translation>
         <translation>Greutatea implicită a liniei:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Utilizarea automată a tipurilor de linii bazate pe ecran în vizualizarea modelului</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Trecerea automată la tipuri de linii bazate pe ecran în vizualizarea modelului</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Scala modelelor de tip linetype în funcție de greutatea liniei</translation>
     </message>
@@ -6094,7 +6084,27 @@ este deja în listă.</translation>
         <translation>Numărul maxim de entități selectate cu puncte de referință afișate:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Utilizează automat tipuri de linii bazate pe ecran în vizualizarea modelului</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Comută automat la tipuri de linii bazate pe ecran în vizualizarea modelului</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Factor de scară pentru greutățile de linie bazate pe ecran:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Factor aplicat greutăților de linie când sunt afișate greutăți de linie bazate pe ecran (de ex. 2 afișează greutățile de linie bazate pe ecran de două ori mai late)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
     </message>
@@ -6214,7 +6224,7 @@ este deja în listă.</translation>
         <translation>Puncte de referință secundare:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Marginea casetei de selecție:</translation>
     </message>
@@ -6234,22 +6244,22 @@ este deja în listă.</translation>
         <translation>Puncte de plecare:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Puncte finale:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Puncte de referință terțiare:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Puncte de referință de ancorare:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Unelte Snap</translation>
     </message>
@@ -6284,7 +6294,7 @@ este deja în listă.</translation>
         <translation>Factor de estompare a setului de lucru:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Instrumente Zoom</translation>
     </message>
@@ -13860,7 +13870,7 @@ este deja în listă.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Nu se acceptă date abandonate</translation>
     </message>
@@ -13891,7 +13901,7 @@ este deja în listă.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Restabilirea valorilor implicite</translation>
     </message>

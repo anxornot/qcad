@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>애플리케이션 기본 설정</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 기본 설정 변경 사항을 적용하십시오.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>기본값은 다음과 같습니다</translation>
     </message>
@@ -1368,7 +1368,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>위젯</translation>
     </message>
@@ -5974,17 +5974,7 @@ is already in the list.</source>
         <translation>기본 선 무게:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>모델 보기에서 화면 기반 라인 유형 자동 사용</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>모델 보기에서 화면 기반 선 유형으로 자동 전환</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>선 무게에 따른 선형 패턴 스케일 조정</translation>
     </message>
@@ -6084,7 +6074,27 @@ is already in the list.</source>
         <translation>표시된 기준점이 있는 최대 선택된 엔티티입니다:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>모델 뷰에서 화면 기반 선 유형을 자동으로 사용</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>모델 뷰에서 화면 기반 선 유형으로 자동 전환</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>화면 기반 선 가중치 배율 계수:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>화면 기반 선 가중치가 표시될 때 선 가중치에 적용되는 계수 (예: 2는 화면 기반 선 가중치를 두 배 굵게 표시)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
     </message>
@@ -6204,7 +6214,7 @@ is already in the list.</source>
         <translation>보조 기준점:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>선택 상자 테두리:</translation>
     </message>
@@ -6224,22 +6234,22 @@ is already in the list.</source>
         <translation>시작 지점:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>엔드 포인트:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>3차 기준점:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>스냅 기준점:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>스냅 도구</translation>
     </message>
@@ -6274,7 +6284,7 @@ is already in the list.</source>
         <translation>작업 세트 페이딩 계수:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>줌 도구</translation>
     </message>
@@ -13840,7 +13850,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>삭제된 데이터는 지원되지 않습니다</translation>
     </message>
@@ -13871,7 +13881,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>기본값 복원</translation>
     </message>

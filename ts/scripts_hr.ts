@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Postavke aplikacije</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 primjenjivanje promijenjenih postavki.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Zadane postavke za</translation>
     </message>
@@ -1373,7 +1373,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Dodatci</translation>
     </message>
@@ -5985,17 +5985,7 @@ večpostoji na popisu.</translation>
         <translation>Zadana debljina crte:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatski koristi zaslonske vrste crta u prikazu modela</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatski prebaci na zaslonske vrste crta u prikazu modela</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skaliraj uzorke vrsta crta prema debljini crte</translation>
     </message>
@@ -6066,7 +6056,27 @@ večpostoji na popisu.</translation>
         <translation>Uvijek iscrtavaj polilinije s prilagođenim širinama najmanje 1 piksel široko</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automatski koristi zaslonske vrste crta u prikazu modela</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automatski prebaci na zaslonske vrste crta u prikazu modela</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Faktor mjerila zaslonskih debljina crta:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor koji se primjenjuje na debljine crta kada se prikazuju zaslonske debljine crta (npr. 2 prikazuje zaslonske debljine crta dvostruko šire)</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Prikaži lukove kao linije ispod ovog kuta (stupnjevi):</translation>
     </message>
@@ -6215,7 +6225,7 @@ večpostoji na popisu.</translation>
         <translation>Sekundarne referentne točke:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Rub okvira odabira:</translation>
     </message>
@@ -6235,22 +6245,22 @@ večpostoji na popisu.</translation>
         <translation>Početne točke:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Krajnje točke:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tercijarne referentne točke:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Referentne točke hvatanja:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Alati hvatanja</translation>
     </message>
@@ -6285,7 +6295,7 @@ večpostoji na popisu.</translation>
         <translation>Faktor blijeđenja radnog skupa:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Alati uvećanja</translation>
     </message>
@@ -13861,7 +13871,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Ispušteni podaci nisu podržani</translation>
     </message>
@@ -13892,7 +13902,7 @@ večpostoji na popisu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Vrati zadano</translation>
     </message>

@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Preferencje aplikacji</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 aby wprowadzić zmiany preferencji.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Domyślne dla</translation>
     </message>
@@ -1372,7 +1372,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5964,7 +5964,27 @@ jest już na liście.</translation>
         <translation>Zapobieganie wyświetlaniu obrazu białego na białym / czarnego na czarnym</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automatycznie używaj ekranowych rodzajów linii w widoku modelu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automatycznie przełączaj na ekranowe rodzaje linii w widoku modelu</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Współczynnik skali ekranowych szerokości linii:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Współczynnik stosowany do szerokości linii, gdy wyświetlane są ekranowe szerokości linii (np. 2 wyświetla ekranowe szerokości linii dwukrotnie szersze)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Zastosuj wagę linii do punktów</translation>
     </message>
@@ -6015,7 +6035,7 @@ jest już na liście.</translation>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -6025,12 +6045,7 @@ jest już na liście.</translation>
         <translation>Wyłączenie drukowania</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skalowanie wzorów rodzajów linii wg grubości linii</translation>
     </message>
@@ -6060,7 +6075,7 @@ jest już na liście.</translation>
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-413"/>
+        <location line="-459"/>
         <source>Linetypes and Lineweights</source>
         <translation>Rodzaje linii i wagi linii</translation>
     </message>
@@ -6070,7 +6085,7 @@ jest już na liście.</translation>
         <translation>Domyślny lineweight:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+183"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
@@ -6080,12 +6095,7 @@ jest już na liście.</translation>
         <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
-        <location line="-500"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
-    </message>
-    <message>
-        <location line="+237"/>
+        <location line="-263"/>
         <source>Number of preview entities:</source>
         <translation>Liczba jednostek podglądu:</translation>
     </message>
@@ -6204,7 +6214,7 @@ jest już na liście.</translation>
         <translation>Drugorzędne punkty referencyjne:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Obramowanie prostokąta zaznaczenia:</translation>
     </message>
@@ -6224,22 +6234,22 @@ jest już na liście.</translation>
         <translation>Punkty początkowe:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Punkty końcowe:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Drugorzędny punkt odniesienia:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Punkty odniesienia przyciągania:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Narzędzia przyciągania</translation>
     </message>
@@ -6274,7 +6284,7 @@ jest już na liście.</translation>
         <translation>Współczynnik zanikania zestawu roboczego:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Narzędzia przybliżania</translation>
     </message>
@@ -6284,7 +6294,7 @@ jest już na liście.</translation>
         <translation>Obramowanie okna przybliżania:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>Pochodzenie:</translation>
     </message>
@@ -13860,7 +13870,7 @@ jest już na liście.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -13891,7 +13901,7 @@ jest już na liście.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Przywróć ustawienia domyślne</translation>
     </message>

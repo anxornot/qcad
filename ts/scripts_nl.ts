@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Toepassingsvoorkeuren</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 de wijzigingen door te voeren.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Standaardinstellingen voor</translation>
     </message>
@@ -1370,7 +1370,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5959,7 +5959,27 @@ is al in de lijst.</translation>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Scherm-gebaseerde lijntypen automatisch gebruiken in modelweergave</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automatisch overschakelen naar scherm-gebaseerde lijntypen in modelweergave</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Schaalfactor voor scherm-gebaseerde lijndiktes:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Factor toegepast op lijndiktes wanneer scherm-gebaseerde lijndiktes worden weergegeven (bijv. 2 toont scherm-gebaseerde lijndiktes tweemaal zo breed)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Pas lijndikte toe op punten</translation>
     </message>
@@ -6020,7 +6040,7 @@ is al in de lijst.</translation>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -6030,12 +6050,7 @@ is al in de lijst.</translation>
         <translation>Uitschakelen voor afdrukken</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Schaal lijntype patronen gebaseerd op lijndikte</translation>
     </message>
@@ -6060,7 +6075,7 @@ is al in de lijst.</translation>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
     <message>
-        <location line="-498"/>
+        <location line="-544"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -6070,17 +6085,12 @@ is al in de lijst.</translation>
         <translation>Standaard lijnbreedte:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+183"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
     <message>
-        <location line="-102"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
-    </message>
-    <message>
-        <location line="+237"/>
+        <location line="+135"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -6199,7 +6209,7 @@ is al in de lijst.</translation>
         <translation>Secundaire referentiepunten:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Keuzevenster rand:</translation>
     </message>
@@ -6219,22 +6229,22 @@ is al in de lijst.</translation>
         <translation>Startpunten:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Eindpunten:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiaire referentiepunten:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Vang-referentiepunten:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Vangfuncties</translation>
     </message>
@@ -6269,7 +6279,7 @@ is al in de lijst.</translation>
         <translation>Werkset vervagingsfactor:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoomgereedschappen</translation>
     </message>
@@ -6279,7 +6289,7 @@ is al in de lijst.</translation>
         <translation>Zoomvensterrand:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>Oorsprong:</translation>
     </message>
@@ -13850,7 +13860,7 @@ is al in de lijst.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -13881,7 +13891,7 @@ is al in de lijst.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>

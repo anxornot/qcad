@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Предпочитания на приложението</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 промените в предпочитанията да влязат в сила.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>По подразбиране за</translation>
     </message>
@@ -1370,7 +1370,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Уиджети</translation>
     </message>
@@ -5979,17 +5979,7 @@ is already in the list.</source>
         <translation>Тегло на линията по подразбиране:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Автоматично използване на базирани на екрана типове линии в изгледа на модела</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Автоматично превключване към базирани на екрана типове линии в изгледа на модела</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Мащабиране на шаблоните на линейни типове според теглото на линията</translation>
     </message>
@@ -6089,7 +6079,27 @@ is already in the list.</source>
         <translation>Максимално избрани обекти с показани референтни точки:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Автоматично използване на екранни типове линии в изгледа на модела</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Автоматично превключване към екранни типове линии в изгледа на модела</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Коефициент на мащабиране на екранните тегла на линиите:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Коефициент, прилаган към теглата на линиите, когато се показват екранни тегла на линиите (напр. 2 показва екранните тегла на линиите два пъти по-широки)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Винаги визуализирайте полилинии с потребителски ширини с ширина поне 1 пиксел</translation>
     </message>
@@ -6209,7 +6219,7 @@ is already in the list.</source>
         <translation>Вторични референтни точки:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Рамка на полето за избор:</translation>
     </message>
@@ -6229,22 +6239,22 @@ is already in the list.</source>
         <translation>Начални точки:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Крайни точки:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Третични референтни точки:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Референтни точки за прихващане:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Инструменти Snap</translation>
     </message>
@@ -6279,7 +6289,7 @@ is already in the list.</source>
         <translation>Фактор на избледняване на работния комплект:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Инструменти за мащабиране</translation>
     </message>
@@ -13850,7 +13860,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Не се поддържат отпаднали данни</translation>
     </message>
@@ -13881,7 +13891,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Възстановяване на настройките по подразбиране</translation>
     </message>

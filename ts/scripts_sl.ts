@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Nastavitve aplikacije</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 da bodo spremembe začele delovat.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Privzeto za</translation>
     </message>
@@ -1370,7 +1370,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5975,7 +5975,27 @@ je že na seznamu.</translation>
         <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+35"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Samodejno uporabi tipe črt temelječe na zaslonu v pogledu modela</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Samodejno preklopi na tipe črt temelječe na zaslonu v pogledu modela</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Faktor povečave debelin črt temelječih na zaslonu:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor, ki se uporabi za debeline črt, ko so prikazane debeline črt temelječe na zaslonu (npr. 2 prikaže debeline črt temelječe na zaslonu dvakrat širše)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Uporabite utež črte za točke</translation>
     </message>
@@ -6031,7 +6051,7 @@ je že na seznamu.</translation>
         <translation>Trajni izbor</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -6041,12 +6061,7 @@ je že na seznamu.</translation>
         <translation>Onemogoči za tiskanje</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Samodejno preklopi na zaslonske črte v prikazu modela</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Povečuj vzorce črt glede na debelino črte</translation>
     </message>
@@ -6086,12 +6101,7 @@ je že na seznamu.</translation>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-500"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
-    </message>
-    <message>
-        <location line="+237"/>
+        <location line="-263"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -6205,7 +6215,7 @@ je že na seznamu.</translation>
         <translation>Sekundarne referenčne točke:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Rob okvirja izbire:</translation>
     </message>
@@ -6225,22 +6235,22 @@ je že na seznamu.</translation>
         <translation>Začetne točke:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Končne točke:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tretjestopenjske sklicne točke:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Sklicne točke pripenjanja:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Orodja lepljenja</translation>
     </message>
@@ -6275,7 +6285,7 @@ je že na seznamu.</translation>
         <translation>Faktor bledenja delovnega sklopa:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Orodja povečave</translation>
     </message>
@@ -6285,7 +6295,7 @@ je že na seznamu.</translation>
         <translation>Okvir povečave:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>
@@ -13866,7 +13876,7 @@ je že na seznamu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
@@ -13897,7 +13907,7 @@ je že na seznamu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>

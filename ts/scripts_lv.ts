@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Lietojumprogrammas preferences</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 lai stātos spēkā preferenču izmaiņas.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Noklusējuma iestatījumi</translation>
     </message>
@@ -1372,7 +1372,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Logrīki</translation>
     </message>
@@ -5984,17 +5984,7 @@ jau ir sarakstā.</translation>
         <translation>Noklusējuma līnijas svars:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automātiski izmantot ekrānā balstītus līniju tipus modeļa skatā</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automātiska pārslēgšanās uz ekrānā balstītiem līniju tipiem modeļa skatā</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Līnijtipu modeļu mērogošana pēc līnijas svara</translation>
     </message>
@@ -6094,7 +6084,27 @@ jau ir sarakstā.</translation>
         <translation>Maksimāli atlasītās vienības ar attēlotajiem atskaites punktiem:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automātiski izmantot ekrānā bāzētus līniju tipus modeļa skatā</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automātiski pārslēgties uz ekrānā bāzētiem līniju tipiem modeļa skatā</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Ekrānā bāzēto līniju biezumu mēroga koeficients:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Koeficients, ko piemēro līniju biezumiem, kad tiek rādīti ekrānā bāzēti līniju biezumi (piem., 2 rāda ekrānā bāzētos līniju biezumus divreiz platākus)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
@@ -6214,7 +6224,7 @@ jau ir sarakstā.</translation>
         <translation>Sekundārie atskaites punkti:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Izvēles lodziņa robeža:</translation>
     </message>
@@ -6234,22 +6244,22 @@ jau ir sarakstā.</translation>
         <translation>Sākuma punkti:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Gala punkti:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Terciārie atskaites punkti:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap atsauces punkti:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap rīki</translation>
     </message>
@@ -6284,7 +6294,7 @@ jau ir sarakstā.</translation>
         <translation>Darba komplekts izbalēšanas koeficients:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Palielināšanas rīki</translation>
     </message>
@@ -13860,7 +13870,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Nav atbalstīta datu atmešana</translation>
     </message>
@@ -13891,7 +13901,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Atjaunot noklusējuma iestatījumus</translation>
     </message>

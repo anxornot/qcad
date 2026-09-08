@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>應用首選項</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 的偏好变化生效。</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>預設值為</translation>
     </message>
@@ -1368,7 +1368,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>小工具</translation>
     </message>
@@ -5974,17 +5974,7 @@ is already in the list.</source>
         <translation>預設線重：</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>在模型檢視中自動使用基於螢幕的線型</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>在模型檢視中自動切換到基於螢幕的線型</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>按線重比例劃分線型圖案</translation>
     </message>
@@ -6055,7 +6045,27 @@ is already in the list.</source>
         <translation>始終以至少 1 畫素寬的自訂寬度呈現多重曲線</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>在模型視圖中自動使用基於螢幕的線型</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>在模型視圖中自動切換到基於螢幕的線型</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>基於螢幕的線重比例係數：</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>顯示基於螢幕的線重時套用於線重的係數（例如 2 表示基於螢幕的線重顯示為兩倍寬）</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>在這個角度（度數）以下以線的形式顯示弧線：</translation>
     </message>
@@ -6204,7 +6214,7 @@ is already in the list.</source>
         <translation>次要參考點：</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>選擇框邊框：</translation>
     </message>
@@ -6224,22 +6234,22 @@ is already in the list.</source>
         <translation>起點：</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>終點：</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>三級參考點：</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>捕捉參考點：</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>卡扣工具</translation>
     </message>
@@ -6274,7 +6284,7 @@ is already in the list.</source>
         <translation>工作集消退係數：</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>縮放工具</translation>
     </message>
@@ -13840,7 +13850,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>不支援掉線資料</translation>
     </message>
@@ -13871,7 +13881,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>恢復預設值</translation>
     </message>

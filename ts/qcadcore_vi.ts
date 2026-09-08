@@ -325,7 +325,7 @@
         <translation>Tham chiếu ngoài</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+931"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+937"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Phát hiện tham chiếu khối vòng lặp (đệ quy):</translation>
     </message>

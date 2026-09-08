@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Предпочтения программы</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 чтобы изменения вступили в силу.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Значения по умолчанию для</translation>
     </message>
@@ -1372,7 +1372,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5964,7 +5964,27 @@ is already in the list.</source>
         <translation>Предотвратить белый на белом / чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Автоматически использовать типы линий, оптимизированные для экрана, в виде модели</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Автоматически переключаться на типы линий, оптимизированные для экрана, в виде модели</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Коэффициент масштабирования экранного веса линий:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Коэффициент, применяемый к весу линий при отображении экранного веса линий (например, 2 отображает экранный вес линий вдвое шире)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Применить вес линии к точкам</translation>
     </message>
@@ -6025,7 +6045,7 @@ is already in the list.</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -6035,12 +6055,7 @@ is already in the list.</source>
         <translation>Отключить для печати</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Автоматически переключиться на типы линий, оптимизированные для экрана, в просмотре моделей</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Масштабировать шаблоны типов линий по весу линии</translation>
     </message>
@@ -6065,7 +6080,7 @@ is already in the list.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-191"/>
         <source>Linetypes and Lineweights</source>
         <translation>Типы и вес линий</translation>
     </message>
@@ -6075,12 +6090,7 @@ is already in the list.</source>
         <translation>Вес линии по умолчанию:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
-    </message>
-    <message>
-        <location line="+116"/>
+        <location line="+197"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Всегда отображать полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
@@ -6204,7 +6214,7 @@ is already in the list.</source>
         <translation>Вторичные точки привязки:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Границы рамки выделения:</translation>
     </message>
@@ -6224,22 +6234,22 @@ is already in the list.</source>
         <translation>Начальные точки:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Конечные точки:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Третичные точки привязки:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Точки привязки:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Инструменты прилипания</translation>
     </message>
@@ -6274,7 +6284,7 @@ is already in the list.</source>
         <translation>Коэффициент обесцвечивания рабочего набора:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Инструменты масштабирования</translation>
     </message>
@@ -6284,7 +6294,7 @@ is already in the list.</source>
         <translation>Граница рамки масштаба:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>Начало координат:</translation>
     </message>
@@ -13860,7 +13870,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
@@ -13891,7 +13901,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Восстановить умолчания</translation>
     </message>

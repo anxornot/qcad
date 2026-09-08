@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Aplikační předvolby</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 aby se změny předvoleb projevily.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Výchozí pro</translation>
     </message>
@@ -1370,7 +1370,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
@@ -5962,7 +5962,27 @@ již v seznamu je.</translation>
         <translation>Zabránit bílé barvě na bílém / černé barvě na černém displeji</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automaticky používat typy čar závislé na obrazovce v pohledu modelu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automaticky přepnout na typy čar závislé na obrazovce v pohledu modelu</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Měřítko tlouštěk čar závislých na obrazovce:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor použitý na tloušťky čar při zobrazení tlouštěk čar závislých na obrazovce (např. 2 zobrazí tloušťky čar závislé na obrazovce dvakrát širší)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Použití váhy čáry na body</translation>
     </message>
@@ -6018,7 +6038,7 @@ již v seznamu je.</translation>
         <translation>Trvalý výběr</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -6028,17 +6048,7 @@ již v seznamu je.</translation>
         <translation>Zakázat pro tisk</translation>
     </message>
     <message>
-        <location line="+53"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>V zobrazení modelu automaticky použít typy čar v závislosti na obrazovce</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>V zobrazení modelu automaticky přepnout na typy čar v závislosti na obrazovce</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Měnit měřítko vzorů čar podle tloušťky čáry</translation>
     </message>
@@ -6083,7 +6093,7 @@ již v seznamu je.</translation>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-191"/>
         <source>Linetypes and Lineweights</source>
         <translation>Typy a váhy čar</translation>
     </message>
@@ -6093,7 +6103,7 @@ již v seznamu je.</translation>
         <translation>Výchozí tloušťka čáry:</translation>
     </message>
     <message>
-        <location line="+535"/>
+        <location line="+581"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
@@ -6212,7 +6222,7 @@ již v seznamu je.</translation>
         <translation>Sekundární referenční body:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Okraj rámečku výběru:</translation>
     </message>
@@ -6232,22 +6242,22 @@ již v seznamu je.</translation>
         <translation>Počáteční body:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Koncové body:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Terciární referenční body:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Referenční body přichycení:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Nástroje přichycení</translation>
     </message>
@@ -6282,7 +6292,7 @@ již v seznamu je.</translation>
         <translation>Faktor blednutí pracovní sady:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Nástroje pro přibližování</translation>
     </message>
@@ -13858,7 +13868,7 @@ již v seznamu je.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nejsou podporované</translation>
     </message>
@@ -13889,7 +13899,7 @@ již v seznamu je.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>

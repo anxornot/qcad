@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Indstillinger for programmer</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 ændringerne i indstillingerne træder i kraft.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Standardværdier for</translation>
     </message>
@@ -1370,7 +1370,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5979,17 +5979,7 @@ er allerede på listen.</translation>
         <translation>Standard linjevægt:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatisk brug af skærmbaserede linjetyper i modelvisning</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatisk skift til skærmbaserede linjetyper i modelvisning</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skaler linjetype-mønstre efter linjens vægt</translation>
     </message>
@@ -6060,7 +6050,27 @@ er allerede på listen.</translation>
         <translation>Polylinjer med brugerdefinerede bredder skal altid være mindst 1 pixel brede</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Brug automatisk skærmbaserede linjetyper i modelvisning</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Skift automatisk til skærmbaserede linjetyper i modelvisning</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Skaleringsfaktor for skærmbaserede linjevægte:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor der anvendes på linjevægte, når skærmbaserede linjevægte vises (f.eks. viser 2 skærmbaserede linjevægte dobbelt så brede)</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Vis buer som linjer under denne vinkel (grader):</translation>
     </message>
@@ -6209,7 +6219,7 @@ er allerede på listen.</translation>
         <translation>Sekundære referencepunkter:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Grænse for valgfeltet:</translation>
     </message>
@@ -6229,22 +6239,22 @@ er allerede på listen.</translation>
         <translation>Startpunkter:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Slutpunkter:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiære referencepunkter:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap-referencepunkter:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap-værktøj</translation>
     </message>
@@ -6279,7 +6289,7 @@ er allerede på listen.</translation>
         <translation>Arbejdsindstillingens udvisningsfaktor:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoom-værktøjer</translation>
     </message>
@@ -13850,7 +13860,7 @@ er allerede på listen.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Tabte data ikke understøttet</translation>
     </message>
@@ -13881,7 +13891,7 @@ er allerede på listen.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Gendan standardindstillinger</translation>
     </message>

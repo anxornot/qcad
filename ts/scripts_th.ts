@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>การตั้งค่าแอปพลิเคชัน</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 การเปลี่ยนแปลงการตั้งค่ามีผล</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>ค่าเริ่มต้นสำหรับ</translation>
     </message>
@@ -1368,7 +1368,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>วิดเจ็ต</translation>
     </message>
@@ -5974,17 +5974,7 @@ is already in the list.</translation>
         <translation>น้ำหนักเส้นเริ่มต้น:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatically use screen based linetypes in model view</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Auto switch to screen based linetypes in model view</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Scale linetype patterns by line weight</translation>
     </message>
@@ -6055,7 +6045,27 @@ is already in the list.</translation>
         <translation>เรนเดอร์โพลีไลน์ที่มีความกว้างกำหนดเองอย่างน้อย 1 พิกเซลเสมอ</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>ใช้ประเภทเส้นตามหน้าจอโดยอัตโนมัติในมุมมองโมเดล</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>สลับไปใช้ประเภทเส้นตามหน้าจอโดยอัตโนมัติในมุมมองโมเดล</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>ตัวคูณมาตราส่วนน้ำหนักเส้นตามหน้าจอ:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>ตัวคูณที่ใช้กับน้ำหนักเส้นเมื่อแสดงน้ำหนักเส้นตามหน้าจอ (เช่น 2 จะแสดงน้ำหนักเส้นตามหน้าจอกว้างเป็นสองเท่า)</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Display arcs as lines below this angle (degrees):</translation>
     </message>
@@ -6204,7 +6214,7 @@ is already in the list.</translation>
         <translation>Secondary อ้างอิง Points:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Selection box border:</translation>
     </message>
@@ -6224,22 +6234,22 @@ is already in the list.</translation>
         <translation>เริ่ม Points:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>จุดสิ้นสุด Points:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiary อ้างอิง Points:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>จุดอ้างอิงการจับ:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>เครื่องมือจับ</translation>
     </message>
@@ -6274,7 +6284,7 @@ is already in the list.</translation>
         <translation>ตัวคูณการจางของชุดทำงาน:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>เครื่องมือซูม</translation>
     </message>
@@ -13840,7 +13850,7 @@ is already in the list.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>
@@ -13871,7 +13881,7 @@ is already in the list.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>

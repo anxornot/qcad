@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Application Preferences</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 the preference changes to take effect.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Defaults for</translation>
     </message>
@@ -1370,7 +1370,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5979,7 +5979,27 @@ is already in the list.</translation>
         <translation>Default lineweight:</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+35"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automatically use screen-based linetypes in model view</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Auto switch to screen-based linetypes in model view</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Screen-based lineweight scale factor:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Apply line weight to points</translation>
     </message>
@@ -6040,17 +6060,7 @@ is already in the list.</translation>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1003"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatically use screen based linetypes in model view</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Auto switch to screen based linetypes in model view</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-993"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Scale linetype patterns by line weight</translation>
     </message>
@@ -6209,7 +6219,7 @@ is already in the list.</translation>
         <translation>Secondary reference points:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Selection box border:</translation>
     </message>
@@ -6229,22 +6239,22 @@ is already in the list.</translation>
         <translation>Start points:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>End points:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiary reference points:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap reference points:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap Tools</translation>
     </message>
@@ -6279,7 +6289,7 @@ is already in the list.</translation>
         <translation>Working set fading factor:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoom Tools</translation>
     </message>
@@ -13850,7 +13860,7 @@ is already in the list.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>
@@ -13881,7 +13891,7 @@ is already in the list.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>

@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Applikationseinstellungen</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 um die Änderungen zu übernehmen.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Standards für</translation>
     </message>
@@ -1370,7 +1370,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5959,7 +5959,27 @@ ist bereits in der Liste.</translation>
         <translation>Schwarz / weiß automatisch anpassen</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Bildschirmbasierte Linientypen in der Modellansicht automatisch verwenden</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>In der Modellansicht automatisch zu bildschirmbasierten Linientypen wechseln</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Skalierungsfaktor für bildschirmbasierte Linienbreiten:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor, der auf Linienbreiten angewendet wird, wenn bildschirmbasierte Linienbreiten angezeigt werden (z.B. 2 zeigt bildschirmbasierte Linienbreiten doppelt so breit an)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>Linienstärke auf Punkte anwenden</translation>
     </message>
@@ -6015,7 +6035,7 @@ ist bereits in der Liste.</translation>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6025,12 +6045,7 @@ ist bereits in der Liste.</translation>
         <translation>Beim Drucken deaktivieren</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Linienmuster skalieren basierend auf Linienbreite</translation>
     </message>
@@ -6060,7 +6075,7 @@ ist bereits in der Liste.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-413"/>
+        <location line="-459"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -6070,7 +6085,7 @@ ist bereits in der Liste.</translation>
         <translation>Standard-Linienbreite:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+183"/>
         <source>Anti-aliasing on by default</source>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
@@ -6080,12 +6095,7 @@ ist bereits in der Liste.</translation>
         <translation>Timeout für Schraffurwiedergabe:</translation>
     </message>
     <message>
-        <location line="-500"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
-    </message>
-    <message>
-        <location line="+237"/>
+        <location line="-263"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -6194,7 +6204,7 @@ ist bereits in der Liste.</translation>
         <translation>Sekundäre Referenzpunkte:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Auswahlbox (Rand):</translation>
     </message>
@@ -6214,22 +6224,22 @@ ist bereits in der Liste.</translation>
         <translation>Startpunkte:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Endpunkte:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiäre Referenzpunkte:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Fang-Referenzpunkte:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Fangwerkzeuge</translation>
     </message>
@@ -6264,7 +6274,7 @@ ist bereits in der Liste.</translation>
         <translation>Ausblendungsfaktor des Arbeitssatzes:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoomwerkzeuge</translation>
     </message>
@@ -6274,7 +6284,7 @@ ist bereits in der Liste.</translation>
         <translation>Auswahlbox (Rand):</translation>
     </message>
     <message>
-        <location line="-820"/>
+        <location line="-838"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>
@@ -13850,7 +13860,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
@@ -13881,7 +13891,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Preferensi Aplikasi</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 agar perubahan preferensi dapat diterapkan.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Default untuk</translation>
     </message>
@@ -1368,7 +1368,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widget</translation>
     </message>
@@ -5974,17 +5974,7 @@ sudah ada dalam daftar.</translation>
         <translation>Bobot garis default:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Secara otomatis menggunakan linetype berbasis layar dalam tampilan model</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Beralih otomatis ke linetype berbasis layar dalam tampilan model</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skala pola linetype berdasarkan berat garis</translation>
     </message>
@@ -6084,7 +6074,27 @@ sudah ada dalam daftar.</translation>
         <translation>Entitas maksimum yang dipilih dengan titik referensi yang ditampilkan:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Gunakan tipe garis berbasis layar secara otomatis dalam tampilan model</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Beralih otomatis ke tipe garis berbasis layar dalam tampilan model</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Faktor skala bobot garis berbasis layar:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor yang diterapkan pada bobot garis saat bobot garis berbasis layar ditampilkan (mis. 2 menampilkan bobot garis berbasis layar dua kali lebih lebar)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
@@ -6204,7 +6214,7 @@ sudah ada dalam daftar.</translation>
         <translation>Titik referensi sekunder:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Batas kotak pilihan:</translation>
     </message>
@@ -6224,22 +6234,22 @@ sudah ada dalam daftar.</translation>
         <translation>Titik awal:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Titik akhir:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Titik referensi tersier:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Titik referensi jepret:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Alat Jepret</translation>
     </message>
@@ -6274,7 +6284,7 @@ sudah ada dalam daftar.</translation>
         <translation>Faktor pemudaran setelan kerja:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Alat Zoom</translation>
     </message>
@@ -13840,7 +13850,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Data yang dijatuhkan tidak didukung</translation>
     </message>
@@ -13871,7 +13881,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Memulihkan default</translation>
     </message>

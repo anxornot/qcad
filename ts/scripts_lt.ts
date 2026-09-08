@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Programos nuostatos</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 nuostatos pakeitimai įsigaliotų.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Numatytosios reikšmės</translation>
     </message>
@@ -1372,7 +1372,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Valdikliai</translation>
     </message>
@@ -5984,17 +5984,7 @@ jau yra sąraše.</translation>
         <translation>Numatytasis linijų svoris:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automatiškai naudoti ekrano linijų tipus modelio rodinyje</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatinis perjungimas į ekrano linijų tipus modelio rodinyje</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Linijų šablonų mastelio modeliai pagal linijos svorį</translation>
     </message>
@@ -6065,7 +6055,27 @@ jau yra sąraše.</translation>
         <translation>Visada atvaizduokite bent 1 pikselio pločio polilinijas su pasirinktiniais pikseliais</translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Automatiškai naudoti ekraninius linijų tipus modelio rodinyje</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Automatiškai perjungti į ekraninius linijų tipus modelio rodinyje</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Ekraninių linijų storių mastelio koeficientas:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Koeficientas, taikomas linijų storiams, kai rodomi ekraniniai linijų storiai (pvz., 2 rodo ekraninius linijų storius dvigubai platesnius)</translation>
+    </message>
+    <message>
+        <location line="+325"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Rodyti lankus kaip linijas, esančias žemiau šio kampo (laipsniais):</translation>
     </message>
@@ -6214,7 +6224,7 @@ jau yra sąraše.</translation>
         <translation>Antriniai atskaitos taškai:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Pasirinkimo langelio apvadas:</translation>
     </message>
@@ -6234,22 +6244,22 @@ jau yra sąraše.</translation>
         <translation>Pradžios taškai:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Galutiniai taškai:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tretiniai atskaitos taškai:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap atskaitos taškai:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>&quot;Snap&quot; įrankiai</translation>
     </message>
@@ -6284,7 +6294,7 @@ jau yra sąraše.</translation>
         <translation>Darbinis rinkinio išblukimo koeficientas:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Padidinimo įrankiai</translation>
     </message>
@@ -13860,7 +13870,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -13891,7 +13901,7 @@ jau yra sąraše.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Atkurti numatytąsias nuostatas</translation>
     </message>

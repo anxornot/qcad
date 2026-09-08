@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Налаштування програми</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 зміни налаштувань набули чинності.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Значення за замовчуванням для</translation>
     </message>
@@ -1372,7 +1372,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Віджети</translation>
     </message>
@@ -5984,17 +5984,7 @@ is already in the list.</source>
         <translation>Товщина лінії за замовчуванням:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Автоматичне використання екранних типів ліній у поданні моделі</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Автоматичне перемикання на екранні типи ліній у поданні моделі</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Масштабування шаблонів типів ліній за товщиною лінії</translation>
     </message>
@@ -6094,7 +6084,27 @@ is already in the list.</source>
         <translation>Максимальна кількість обраних об&apos;єктів з відображеними опорними точками:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Автоматично використовувати екранні типи ліній у виді моделі</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Автоматично перемикатися на екранні типи ліній у виді моделі</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Масштабний коефіцієнт екранної товщини ліній:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Коефіцієнт, що застосовується до товщини ліній, коли відображається екранна товщина ліній (напр. 2 відображає екранну товщину ліній удвічі ширшою)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Завжди рендерити полілінії з користувацькою шириною щонайменше 1 піксель</translation>
     </message>
@@ -6214,7 +6224,7 @@ is already in the list.</source>
         <translation>Вторинні опорні точки:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Межа поля виділення:</translation>
     </message>
@@ -6234,22 +6244,22 @@ is already in the list.</source>
         <translation>Початкові точки:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Кінцеві точки:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Третинні опорні точки:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Опорні точки прив&apos;язки:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Інструменти прив&apos;язки</translation>
     </message>
@@ -6284,7 +6294,7 @@ is already in the list.</source>
         <translation>Коефіцієнт згасання робочого набору:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Інструменти масштабування</translation>
     </message>
@@ -13860,7 +13870,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Перетягнуті дані не підтримуються</translation>
     </message>
@@ -13891,7 +13901,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Відновити налаштування за замовчуванням</translation>
     </message>

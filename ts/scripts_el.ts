@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Προτιμήσεις εφαρμογής</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 να τεθούν σε ισχύ οι αλλαγές των προτιμήσεων.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Προεπιλογές για</translation>
     </message>
@@ -1370,7 +1370,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Εργαλεία</translation>
     </message>
@@ -5979,17 +5979,7 @@ is already in the list.</source>
         <translation>Προεπιλεγμένο βάρος γραμμής:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Αυτόματη χρήση τύπων γραμμών με βάση την οθόνη στην προβολή μοντέλου</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Αυτόματη εναλλαγή σε τύπους γραμμών με βάση την οθόνη στην προβολή μοντέλου</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Κλιμάκωση μοτίβων τύπου γραμμής με βάση το βάρος γραμμής</translation>
     </message>
@@ -6089,7 +6079,27 @@ is already in the list.</source>
         <translation>Μέγιστες επιλεγμένες οντότητες με εμφανιζόμενα σημεία αναφοράς:</translation>
     </message>
     <message>
-        <location line="-519"/>
+        <location line="-681"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Αυτόματη χρήση τύπων γραμμών με βάση την οθόνη στην προβολή μοντέλου</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Αυτόματη εναλλαγή σε τύπους γραμμών με βάση την οθόνη στην προβολή μοντέλου</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Συντελεστής κλίμακας βαρών γραμμών με βάση την οθόνη:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Συντελεστής που εφαρμόζεται στα βάρη γραμμών όταν εμφανίζονται βάρη γραμμών με βάση την οθόνη (π.χ. 2 εμφανίζει τα βάρη γραμμών με βάση την οθόνη με διπλάσιο πλάτος)</translation>
+    </message>
+    <message>
+        <location line="+143"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
         <translation>Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
     </message>
@@ -6209,7 +6219,7 @@ is already in the list.</source>
         <translation>Δευτερεύοντα σημεία αναφοράς:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Όριο πλαισίου επιλογής:</translation>
     </message>
@@ -6229,22 +6239,22 @@ is already in the list.</source>
         <translation>Σημεία εκκίνησης:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Τελικά σημεία:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Τριτογενή σημεία αναφοράς:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Σημεία αναφοράς πιασίματος:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Εργαλεία πιασίματος</translation>
     </message>
@@ -6279,7 +6289,7 @@ is already in the list.</source>
         <translation>Συντελεστής εξασθένισης σετ εργασίας:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Εργαλεία μεγέθυνσης</translation>
     </message>
@@ -13850,7 +13860,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Δεν υποστηρίζεται η απόρριψη δεδομένων</translation>
     </message>
@@ -13881,7 +13891,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Επαναφορά προεπιλογών</translation>
     </message>

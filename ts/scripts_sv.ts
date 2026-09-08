@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>Programinställningar</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 ändringarna ska slå igenom.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>Standard för</translation>
     </message>
@@ -1368,7 +1368,7 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5957,17 +5957,7 @@ finns redan i listan.</translation>
         <translation>Standardlinjevikt:</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Använd automatiskt skärmbaserade linjetyper i modellvyn</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automatisk övergång till skärmbaserade linjetyper i modellvyn</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+91"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>Skala linjetypmönster efter linjvikt</translation>
     </message>
@@ -6038,7 +6028,27 @@ finns redan i listan.</translation>
         <translation>Rendera alltid polylinjer med anpassade bredder som är minst 1 pixel breda</translation>
     </message>
     <message>
-        <location line="+254"/>
+        <location line="-162"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>Använd automatiskt skärmbaserade linjetyper i modellvyn</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>Växla automatiskt till skärmbaserade linjetyper i modellvyn</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>Skalfaktor för skärmbaserade linjevikter:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>Faktor som tillämpas på linjevikter när skärmbaserade linjevikter visas (t.ex. 2 visar skärmbaserade linjevikter dubbelt så breda)</translation>
+    </message>
+    <message>
+        <location line="+397"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minsta vinkelsteg för återgivning av bågar (grader):</translation>
     </message>
@@ -6207,7 +6217,7 @@ finns redan i listan.</translation>
         <translation>Sekundära referenspunkter:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>Gränsen för valboxen:</translation>
     </message>
@@ -6227,22 +6237,22 @@ finns redan i listan.</translation>
         <translation>Startpunkter:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>Slutpunkter:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>Tertiära referenspunkter:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>Snap-referenspunkter:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>Snap-verktyg</translation>
     </message>
@@ -6277,7 +6287,7 @@ finns redan i listan.</translation>
         <translation>Arbetsuppsättningens utglesningsfaktor:</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>Zoomverktyg</translation>
     </message>
@@ -13848,7 +13858,7 @@ finns redan i listan.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -13879,7 +13889,7 @@ finns redan i listan.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>Återställa standardvärden</translation>
     </message>

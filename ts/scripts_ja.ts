@@ -280,7 +280,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AbstractPreferences.js" line="+49"/>
+        <location filename="../scripts/Edit/AbstractPreferences.js" line="+307"/>
         <source>Application Preferences</source>
         <translation>アプリケーション設定</translation>
     </message>
@@ -307,7 +307,7 @@ the preference changes to take effect.</source>
 QCADを再起動してください。</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+115"/>
         <source>Defaults for</source>
         <translation>デフォルト</translation>
     </message>
@@ -1368,7 +1368,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+683"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+693"/>
         <location line="+83"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -5954,7 +5954,27 @@ is already in the list.</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+63"/>
+        <source>Automatically use screen-based linetypes in model view</source>
+        <translation>モデルビューで画面ベースのラインタイプを自動的に使用する</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Auto switch to screen-based linetypes in model view</source>
+        <translation>モデルビューで画面ベースのラインタイプに自動的に切り替える</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Screen-based lineweight scale factor:</source>
+        <translation>画面ベースの線幅の倍率:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</source>
+        <translation>画面ベースの線幅を表示するときに線幅に適用される係数 (例: 2 の場合、画面ベースの線幅が2倍の太さで表示されます)</translation>
+    </message>
+    <message>
+        <location line="+100"/>
         <source>Apply line weight to points</source>
         <translation>ポイントに線の太さを適用する</translation>
     </message>
@@ -6010,7 +6030,7 @@ is already in the list.</source>
         <translation>永続的な選択</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1095"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="-1141"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -6020,12 +6040,7 @@ is already in the list.</source>
         <translation>プリント禁止</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Auto switch to screen based linetypes in model view</source>
-        <translation>自動的にモデルビューの基本線種を使用</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+109"/>
         <source>Scale linetype patterns by line weight</source>
         <translation>線分太さによるラインタイプパターンのスケール</translation>
     </message>
@@ -6055,7 +6070,7 @@ is already in the list.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-413"/>
+        <location line="-459"/>
         <source>Linetypes and Lineweights</source>
         <translation>線種と線幅</translation>
     </message>
@@ -6065,7 +6080,7 @@ is already in the list.</source>
         <translation>デフォルトの線幅:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+183"/>
         <source>Anti-aliasing on by default</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
@@ -6075,12 +6090,7 @@ is already in the list.</source>
         <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
-        <location line="-500"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>自動的にモデルビューの基本線種を使用</translation>
-    </message>
-    <message>
-        <location line="+237"/>
+        <location line="-263"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -6194,7 +6204,7 @@ is already in the list.</source>
         <translation>2番目の基準点:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Selection box border:</source>
         <translation>選択ボックスの境界:</translation>
     </message>
@@ -6214,22 +6224,22 @@ is already in the list.</source>
         <translation>開始点:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>End points:</source>
         <translation>終了点:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Tertiary reference points:</source>
         <translation>三次基準点</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Snap reference points:</source>
         <translation>スナップ基準点:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Snap Tools</source>
         <translation>スナップツール</translation>
     </message>
@@ -6264,7 +6274,7 @@ is already in the list.</source>
         <translation>ワーキングセットのフェージングファクター</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>Zoom Tools</source>
         <translation>拡大ツール</translation>
     </message>
@@ -6274,7 +6284,7 @@ is already in the list.</source>
         <translation>ズームボックス:</translation>
     </message>
     <message>
-        <location line="-739"/>
+        <location line="-757"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>
@@ -13840,7 +13850,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+466"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+471"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -13871,7 +13881,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1180"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1187"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
