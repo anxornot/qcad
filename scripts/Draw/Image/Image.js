@@ -84,6 +84,14 @@ Image.prototype.beginEvent = function() {
     this.width = this.image.getPixelWidth();
     this.height = this.image.getPixelHeight();
 
+    // image could not be loaded (file not readable, unsupported or corrupt
+    // format or image exceeds the bitmap allocation limit):
+    if (this.width<=0 || this.height<=0) {
+        EAction.handleUserWarning(Image.getLoadErrorMessage(this.fileName));
+        this.terminate();
+        return;
+    }
+
     var optionsToolBar = EAction.getOptionsToolBar();
     var widthEdit = optionsToolBar.findChild("Width");
     var heightEdit = optionsToolBar.findChild("Height");
@@ -98,6 +106,33 @@ Image.prototype.finishEvent = function() {
     if (!isNull(this.image)) {
         destr(this.image);
     }
+};
+
+/**
+ * \return Warning message for an image file that could not be loaded.
+ * Mentions the bitmap allocation limit (Qt 6) since exceeding it is the
+ * most likely cause for a readable image file that fails to load.
+ */
+Image.getLoadErrorMessage = function(fileName) {
+    var fi = new QFileInfo(fileName);
+    if (!fi.exists() || !fi.isReadable()) {
+        return qsTr("Cannot read image file '%1'.").arg(fileName);
+    }
+
+    var msg = qsTr("Cannot load image '%1'.").arg(fileName);
+
+    if (RSettings.getQtVersion() >= 0x060000 && isFunction(QImageReader.allocationLimit)) {
+        var limit = QImageReader.allocationLimit();
+        if (limit>0) {
+            msg += " " + qsTr("The image might exceed the bitmap allocation limit of %1 MB (see %2 > %3 > %4).")
+                .arg(limit)
+                .arg(qsTr("Application Preferences"))
+                .arg(qsTr("Graphics View"))
+                .arg(qsTr("Appearance"));
+        }
+    }
+
+    return msg;
 };
 
 Image.isSupportedBitmapFile = function(filePath) {
