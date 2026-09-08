@@ -33,6 +33,264 @@ function AbstractPreferences(guiAction, appPreferences, initialClassName) {
 AbstractPreferences.prototype = new Edit();
 AbstractPreferences.includeBasePath = includeBasePath;
 
+/**
+ * Cache of searchable, translated UI strings per preference page file.
+ * Key: absolute .ui file name, value: newline separated string of all
+ * visible labels, titles, tool tips, etc. of the page.
+ * Built lazily on first use of the filter, never requires loading the UI.
+ */
+AbstractPreferences.uiStringsCache = {};
+AbstractPreferences.uiStringsCacheLocale = undefined;
+
+/**
+ * Names of UI properties / attributes with user visible strings
+ * that are searchable through the preferences filter.
+ */
+AbstractPreferences.searchableUiProperties = {
+    "text": true,
+    "title": true,
+    "toolTip": true,
+    "whatsThis": true,
+    "placeholderText": true,
+    "statusTip": true,
+    "windowTitle": true
+};
+
+/**
+ * Replaces the XML entities used in .ui files with their characters.
+ */
+AbstractPreferences.unescapeXml = function(str) {
+    if (str.indexOf("&")===-1) {
+        return str;
+    }
+    str = str.split("&lt;").join("<");
+    str = str.split("&gt;").join(">");
+    str = str.split("&quot;").join("\"");
+    str = str.split("&apos;").join("'");
+    str = str.split("&#10;").join("\n");
+    str = str.split("&#13;").join("\r");
+    str = str.split("&#9;").join("\t");
+    // must be last:
+    str = str.split("&amp;").join("&");
+    return str;
+};
+
+/**
+ * Removes HTML / rich text tags from the given string (e.g. tool tips
+ * defined as rich text in Qt Designer).
+ */
+AbstractPreferences.stripTags = function(str) {
+    var start = str.indexOf("<");
+    if (start===-1) {
+        return str;
+    }
+
+    var ret = "";
+    var pos = 0;
+    while (start!==-1) {
+        ret += str.substring(pos, start);
+        var end = str.indexOf(">", start);
+        if (end===-1) {
+            // unterminated tag: keep rest as is
+            pos = start;
+            break;
+        }
+        // tags separate words:
+        ret += " ";
+        pos = end + 1;
+        start = str.indexOf("<", pos);
+    }
+    ret += str.substring(pos);
+    return ret;
+};
+
+/**
+ * Removes keyboard accelerator markers (single '&') from the given string.
+ */
+AbstractPreferences.stripAccelerators = function(str) {
+    if (str.indexOf("&")===-1) {
+        return str;
+    }
+    var placeholder = "\u0001";
+    return str.split("&&").join(placeholder).split("&").join("").split(placeholder).join("&");
+};
+
+/**
+ * Extracts and translates all user visible strings from the given
+ * Qt Designer .ui file contents without loading the UI.
+ *
+ * Only string properties listed in AbstractPreferences.searchableUiProperties
+ * (and tab titles) are considered. Strings marked as notr="true" are skipped.
+ * Strings are translated using the same translation context that
+ * QUiLoader uses when loading the UI (the &lt;class&gt; element of the form).
+ *
+ * Note that this uses indexOf based scanning rather than regular
+ * expressions for performance reasons.
+ *
+ * \return Array of translated, plain text strings.
+ */
+AbstractPreferences.parseUiStrings = function(contents) {
+    var ret = [];
+    if (!isString(contents)) {
+        return ret;
+    }
+
+    // translation context is the class name of the form:
+    var context = "";
+    var ci = contents.indexOf("<class>");
+    if (ci!==-1) {
+        var ce = contents.indexOf("</class>", ci);
+        if (ce!==-1) {
+            context = contents.substring(ci+7, ce);
+        }
+    }
+
+    var pos = 0;
+    while (true) {
+        var i = contents.indexOf("<string", pos);
+        if (i===-1) {
+            break;
+        }
+        var tagEnd = contents.indexOf(">", i);
+        if (tagEnd===-1) {
+            break;
+        }
+        var tag = contents.substring(i+7, tagEnd);
+
+        // '<stringlist>' or other tags starting with '<string':
+        if (tag.length>0 && tag.charAt(0)!==" " && tag.charAt(0)!=="/") {
+            pos = tagEnd + 1;
+            continue;
+        }
+
+        var text;
+        var end;
+        if (tag.charAt(tag.length-1)==="/") {
+            // empty string element: <string/>
+            text = "";
+            end = tagEnd + 1;
+        }
+        else {
+            end = contents.indexOf("</string>", tagEnd);
+            if (end===-1) {
+                break;
+            }
+            text = contents.substring(tagEnd+1, end);
+            end += 9;
+        }
+        pos = end;
+
+        if (text.length===0) {
+            continue;
+        }
+
+        // untranslatable string (usually a value, not a label):
+        if (tag.indexOf("notr=\"true\"")!==-1) {
+            continue;
+        }
+
+        // find enclosing property or attribute element:
+        var pi = contents.lastIndexOf("<property name=\"", i);
+        var ai = contents.lastIndexOf("<attribute name=\"", i);
+        var nameStart;
+        if (pi===-1 && ai===-1) {
+            continue;
+        }
+        if (pi>ai) {
+            nameStart = pi + 16;
+        }
+        else {
+            nameStart = ai + 17;
+        }
+        // property / attribute must be the direct parent of the string
+        // (not already closed, e.g. string inside a stringlist):
+        var pc = contents.lastIndexOf("</property>", i);
+        var ac = contents.lastIndexOf("</attribute>", i);
+        if (Math.max(pc, ac) > Math.max(pi, ai)) {
+            continue;
+        }
+        var nameEnd = contents.indexOf("\"", nameStart);
+        if (nameEnd===-1) {
+            continue;
+        }
+        var propertyName = contents.substring(nameStart, nameEnd);
+        if (AbstractPreferences.searchableUiProperties[propertyName]!==true) {
+            continue;
+        }
+
+        // disambiguation:
+        var comment = undefined;
+        var cs = tag.indexOf("comment=\"");
+        if (cs!==-1) {
+            var cse = tag.indexOf("\"", cs+9);
+            if (cse!==-1) {
+                comment = AbstractPreferences.unescapeXml(tag.substring(cs+9, cse));
+            }
+        }
+
+        text = AbstractPreferences.unescapeXml(text);
+
+        // translate:
+        var translated;
+        if (isNull(comment)) {
+            translated = qsTranslate(context, text);
+        }
+        else {
+            translated = qsTranslate(context, text, comment);
+        }
+        if (!isString(translated) || translated.length===0) {
+            translated = text;
+        }
+
+        // rich text:
+        if (translated.indexOf("<")!==-1) {
+            translated = AbstractPreferences.stripTags(translated);
+            translated = AbstractPreferences.unescapeXml(translated);
+        }
+        translated = AbstractPreferences.stripAccelerators(translated);
+        translated = translated.trim();
+        if (translated.length===0) {
+            continue;
+        }
+
+        ret.push(translated);
+    }
+
+    return ret;
+};
+
+/**
+ * \return Newline separated string with all searchable, translated
+ * strings (labels, group titles, tool tips, ...) of the given
+ * preference page UI file. The UI file is parsed as text and never
+ * loaded as a widget. Results are cached.
+ */
+AbstractPreferences.getUiStrings = function(uiFileName) {
+    if (!isString(uiFileName) || uiFileName.length===0) {
+        return "";
+    }
+
+    // invalidate cache on locale change:
+    var locale = RSettings.getLocale();
+    if (AbstractPreferences.uiStringsCacheLocale!==locale) {
+        AbstractPreferences.uiStringsCache = {};
+        AbstractPreferences.uiStringsCacheLocale = locale;
+    }
+
+    var cache = AbstractPreferences.uiStringsCache;
+    if (cache.hasOwnProperty(uiFileName)) {
+        return cache[uiFileName];
+    }
+
+    var ret = "";
+    var contents = readTextFile(uiFileName);
+    if (isString(contents)) {
+        ret = AbstractPreferences.parseUiStrings(contents).join("\n");
+    }
+    cache[uiFileName] = ret;
+    return ret;
+};
+
 AbstractPreferences.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
     
@@ -447,14 +705,14 @@ AbstractPreferences.prototype.updateTreeWidget = function(filterText) {
 
     var rexp;
     try{
-        rexp = new RegExp(filterText, "i");
+        rexp = new RegExp(filterText, "im");
     } catch (e) {
-        rexp = new RegExp(".*", "i");
+        rexp = new RegExp(".*", "im");
     }
     
     for(var i=0; i<this.treeWidget.topLevelItemCount; ++i) {
         var item = this.treeWidget.topLevelItem(i);
-        var match = item.text(0).match(rexp);
+        var match = this.itemMatches(item, rexp);
         var found = this.filterItems(item, rexp, match);
         if (found || match) {
             item.setHidden(false);
@@ -467,12 +725,41 @@ AbstractPreferences.prototype.updateTreeWidget = function(filterText) {
 
 /**
  * \internal
+ * \return True if the given navigation tree item matches the given
+ * filter regular expression. Matches against the item text (category
+ * or page title) and, for pages, against the labels, group titles,
+ * tool tips, etc. of the page (see AbstractPreferences.getUiStrings).
+ */
+AbstractPreferences.prototype.itemMatches = function(item, rexp) {
+    if (rexp.test(item.text(0))) {
+        return true;
+    }
+
+    // match contents of the preferences page (labels, tool tips, ...)
+    // without loading the page:
+    var i = item.data(0, Qt.UserRole);
+    if (isNull(i)) {
+        return false;
+    }
+    var addOn = this.addOns[i];
+    if (isNull(addOn)) {
+        return false;
+    }
+    var uiStrings = AbstractPreferences.getUiStrings(addOn.getPreferenceFile());
+    if (uiStrings.length===0) {
+        return false;
+    }
+    return rexp.test(uiStrings);
+};
+
+/**
+ * \internal
  */
 AbstractPreferences.prototype.filterItems = function(item, rexp, showAll) {
     var foundAny = false;
     for(var i=0; i<item.childCount(); ++i) {
         var subitem = item.child(i);
-        var match = subitem.text(0).match(rexp);
+        var match = this.itemMatches(subitem, rexp);
         var found = this.filterItems(subitem, rexp, match);
         if (found || match) {
             subitem.setHidden(false);

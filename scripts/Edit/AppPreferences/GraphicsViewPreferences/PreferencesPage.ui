@@ -330,12 +330,58 @@
        <item>
         <widget class="QCheckBox" name="AutoSwitchLinetypes">
          <property name="toolTip">
-          <string>Automatically use screen based linetypes in model view</string>
+          <string>Automatically use screen-based linetypes in model view</string>
          </property>
          <property name="text">
-          <string>Auto switch to screen based linetypes in model view</string>
+          <string>Auto switch to screen-based linetypes in model view</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_ScreenBasedLineweightScaleFactor">
+         <item>
+          <widget class="QLabel" name="ScreenBasedLineweightScaleFactor_Label">
+           <property name="text">
+            <string>Screen-based lineweight scale factor:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="ScreenBasedLineweightScaleFactor">
+           <property name="toolTip">
+            <string>Factor applied to lineweights when screen-based lineweights are displayed (e.g. 2 shows screen-based lineweights twice as wide)</string>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_ScreenBasedLineweightScaleFactor">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
        <item>
         <widget class="QCheckBox" name="AutoScaleLinetypePatterns">
@@ -1377,6 +1423,7 @@
   <tabstop>ColorThreshold</tabstop>
   <tabstop>DefaultLineweight</tabstop>
   <tabstop>AutoSwitchLinetypes</tabstop>
+  <tabstop>ScreenBasedLineweightScaleFactor</tabstop>
   <tabstop>AutoScaleLinetypePatterns</tabstop>
   <tabstop>ZeroWeightWeight</tabstop>
   <tabstop>ApplyLineweightToPoints</tabstop>
