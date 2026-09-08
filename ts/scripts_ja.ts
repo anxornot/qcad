@@ -6538,7 +6538,37 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>画像ファイル &apos;%1&apos; を読み取れません。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>画像 &apos;%1&apos; を読み込めません。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>画像がビットマップの割り当て上限 %1 MB を超えている可能性があります（%2 &gt; %3 &gt; %4 を参照）。</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>アプリケーション設定</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>グラフィックビュー</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>外見</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>ファイル</translation>
     </message>

@@ -6543,7 +6543,37 @@ on juba loendis.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>Pildifaili &apos;%1&apos; ei saa lugeda.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>Pilti &apos;%1&apos; ei saa laadida.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>Pilt võib ületada bitkaartide eraldamise piirangut %1 MB (vt %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Rakenduse eelistused</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Graafika vaade</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Välimus</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Failid</translation>
     </message>

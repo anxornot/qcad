@@ -6548,7 +6548,37 @@ jau ir sarakstā.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>Nevar nolasīt attēla failu &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>Nevar ielādēt attēlu &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>Attēls, iespējams, pārsniedz bitkaršu piešķīruma ierobežojumu %1 MB (skatīt %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Lietojumprogrammas preferences</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Grafikas skats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Izskats</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Faili</translation>
     </message>

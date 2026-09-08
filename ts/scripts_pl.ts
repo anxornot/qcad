@@ -6548,7 +6548,37 @@ jest już na liście.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>Nie można odczytać pliku obrazu &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>Nie można wczytać obrazu &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>Obraz może przekraczać limit alokacji dla map bitowych wynoszący %1 MB (zobacz %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Preferencje aplikacji</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Widok grafiki</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Wygląd</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Pliki</translation>
     </message>

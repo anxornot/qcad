@@ -6549,7 +6549,37 @@ je že na seznamu.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>Datoteke slike &apos;%1&apos; ni mogoče prebrati.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>Slike &apos;%1&apos; ni mogoče naložiti.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>Slika morda presega omejitev dodelitve za bitne slike %1 MB (glejte %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Nastavitve aplikacije</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Izgled grafike</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Izgled</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Datoteke</translation>
     </message>

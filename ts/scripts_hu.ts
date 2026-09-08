@@ -6539,7 +6539,37 @@ már szerepel a listában.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>A(z) &apos;%1&apos; képfájl nem olvasható.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>A(z) &apos;%1&apos; kép nem tölthető be.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>A kép meghaladhatja a bitképek %1 MB-os lefoglalási korlátját (lásd: %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Alkalmazás beállítások</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Rajz nézet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Megjelenés</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Fájlok</translation>
     </message>

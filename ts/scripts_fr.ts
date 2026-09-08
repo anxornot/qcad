@@ -5971,7 +5971,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+9"/>
         <source>Screen-based lineweight scale factor:</source>
-        <translation>Facteur d'échelle des épaisseurs de ligne pour écran :</translation>
+        <translation>Facteur d&apos;échelle des épaisseurs de ligne pour écran :</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6543,7 +6543,37 @@ est déjà dans la liste.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>Impossible de lire le fichier image &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>Impossible de charger l&apos;image &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>L&apos;image dépasse peut-être la limite d&apos;allocation pour les bitmaps de %1 Mo (voir %2 &gt; %3 &gt; %4).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>Préférences d&apos;application</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>Vue graphique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>Apparence</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>Fichiers</translation>
     </message>

@@ -6538,7 +6538,37 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+119"/>
+        <source>Cannot read image file &apos;%1&apos;.</source>
+        <translation>이미지 파일 &apos;%1&apos;을(를) 읽을 수 없습니다.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot load image &apos;%1&apos;.</source>
+        <translation>이미지 &apos;%1&apos;을(를) 불러올 수 없습니다.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The image might exceed the bitmap allocation limit of %1 MB (see %2 &gt; %3 &gt; %4).</source>
+        <translation>이미지가 비트맵 할당 한도 %1 MB를 초과할 수 있습니다(%2 &gt; %3 &gt; %4 참조).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Application Preferences</source>
+        <translation>애플리케이션 기본 설정</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Graphics View</source>
+        <translation>그래픽 보기</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Appearance</source>
+        <translation>모양</translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Files</source>
         <translation>파일</translation>
     </message>
